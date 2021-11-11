@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         move.x = h;
         move.z = v;
 
-        GetComponent<Transform>().Translate(move * Time.deltaTime * movementSpeed);
+        GetComponent<Transform>().Translate(move * Time.deltaTime * movementSpeed, Space.World);
 
         //Camera
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -48,19 +48,14 @@ public class PlayerController : MonoBehaviour
             transform.LookAt(hit.point); // Look at the point
             transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, 0)); // Clamp the x and z rotation
         }
+
+        //Shooting
         if (Input.GetMouseButtonDown(0))
         {
             if (curAmmo >= 1)
             {
+                Shoot();
                 Debug.Log("It works");
-                Ray ray2 = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray2, out raycastHit, 100f))
-                {
-                    if (raycastHit.transform != null)
-                    {
-                        Shoot();
-                    }
-                }
             }
         }
     }
