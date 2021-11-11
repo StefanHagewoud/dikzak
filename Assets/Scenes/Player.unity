@@ -376,7 +376,6 @@ MonoBehaviour:
   bullet: {fileID: 1419924662765674004, guid: 7e023fff767c33a488c0f9dbb9dfaa52, type: 3}
   maxAmmo: 30
   curAmmo: 0
-  maxClipAmmo: 500
   clipAmmoText: {fileID: 604939877}
   curAmmoText: {fileID: 1422971444}
 --- !u!1 &546003323

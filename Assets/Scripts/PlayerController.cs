@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    [Header("Playerhealth Settings")]
+    public int playerHealth = 100;
+    public Slider healthSlider;
+
     [Header("PlayerMovement")]
     public int movementSpeed;
-
-    [Header("Raycast Settings")]
-    private Vector3 raycastHitPostion;
-    private RaycastHit raycastHit;
 
     [Header("Gun Settings")]
     public GameObject gun;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     public GameObject bullet;
     public int maxAmmo;
     public int curAmmo;
-    public int maxClipAmmo;
+    private int maxClipAmmo;
     private int clipSize;
 
     [Header("Gun Text UI")]
@@ -33,10 +33,14 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Current Ammo
         curAmmo = maxAmmo;
         curAmmoText.text = curAmmo.ToString();
-        clipAmmoText.text = maxClipAmmo.ToString();
         clipSize = maxAmmo;
+
+        //Max Clip Ammo
+        maxClipAmmo = maxAmmo * 15;
+        clipAmmoText.text = maxClipAmmo.ToString();
     }
 
     // Update is called once per frame
@@ -62,17 +66,13 @@ public class PlayerController : MonoBehaviour
         }
 
         //Shooting
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             if (curAmmo >= 1)
             {
                 Shoot();
                 Debug.Log("It works");
             }
-           /* if(curAmmo == 0)
-            {
-                Reload();
-            }*/
         }
 
         //Reloading
@@ -94,9 +94,15 @@ public class PlayerController : MonoBehaviour
     }
     public void Reload()
     {
-        maxClipAmmo -= clipSize;
-        clipAmmoText.text = maxClipAmmo.ToString();
-        curAmmo += clipSize;
-        curAmmoText.text = curAmmo.ToString();
+        if (maxClipAmmo >= 1)
+        {
+            maxClipAmmo -= clipSize;
+            clipAmmoText.text = maxClipAmmo.ToString();
+            curAmmo += clipSize;
+            curAmmoText.text = curAmmo.ToString();
+        } else
+        {
+            return;
+        }
     }
 }
