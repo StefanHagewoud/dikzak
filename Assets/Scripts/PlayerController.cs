@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,18 +14,29 @@ public class PlayerController : MonoBehaviour
 
     [Header("Gun Settings")]
     public GameObject gun;
-    public GameObject bullet;
     public int blastPower;
     public int damage;
+    public GameObject shootingPoint;
+
+    [Header("Ammo Settings")]
+    public GameObject bullet;
     public int maxAmmo;
     public int curAmmo;
-    public GameObject shootingPoint;
+    public int maxClipAmmo;
+    private int clipSize;
+
+    [Header("Gun Text UI")]
+    public Text clipAmmoText;
+    public Text curAmmoText;
 
 
     // Start is called before the first frame update
     void Start()
     {
         curAmmo = maxAmmo;
+        curAmmoText.text = curAmmo.ToString();
+        clipAmmoText.text = maxClipAmmo.ToString();
+        clipSize = maxAmmo;
     }
 
     // Update is called once per frame
@@ -57,6 +69,19 @@ public class PlayerController : MonoBehaviour
                 Shoot();
                 Debug.Log("It works");
             }
+           /* if(curAmmo == 0)
+            {
+                Reload();
+            }*/
+        }
+
+        //Reloading
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if(curAmmo == 0)
+            {
+                Reload();
+            }
         }
     }
     public void Shoot()
@@ -65,5 +90,13 @@ public class PlayerController : MonoBehaviour
         curAmmo--;
         GameObject createdBullet = Instantiate(bullet, shootingPoint.transform.position, shootingPoint.transform.rotation);
         createdBullet.GetComponent<Rigidbody>().velocity = shootingPoint.transform.forward * blastPower;
+        curAmmoText.text = curAmmo.ToString();
+    }
+    public void Reload()
+    {
+        maxClipAmmo -= clipSize;
+        clipAmmoText.text = maxClipAmmo.ToString();
+        curAmmo += clipSize;
+        curAmmoText.text = curAmmo.ToString();
     }
 }
