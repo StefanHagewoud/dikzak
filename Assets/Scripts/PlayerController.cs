@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //Shooting
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButtonDown(0))
         {
             if (curAmmo >= 1)
             {
