@@ -8,32 +8,26 @@ public class GunScript : MonoBehaviour
     public GameObject player;
 
     [Header("Gun Settings")]
+    public GameObject equippedGun;
     public int blastPower;
     public int damage;
     public GameObject shootingPoint;
     public bool automaticGun;
-    public string gunName;
 
     [Header("Ammo Settings")]
     public GameObject bullet;
     public int maxAmmo;
     public int curAmmo;
-    public int maxClipAmmo;
+    private int maxClipAmmo;
     private int clipSize;
 
     [Header("Gun Text UI")]
     public Text clipAmmoText;
     public Text curAmmoText;
-    public Text equippedGunText;
 
     [Header("Automatic Gun Settings")]
     public float fireRate;
     public float lastfired;
-
-    [Header("Sound Settings")]
-    public AudioSource shootingSound;
-    public AudioSource reloadSound;
-    public AudioSource dryFire;
 
     // Start is called before the first frame update
     void Start()
@@ -66,10 +60,6 @@ public class GunScript : MonoBehaviour
                         Shoot();
                     }
                 }
-                else
-                {
-                    dryFire.Play();
-                }
             }
         }
         else
@@ -79,10 +69,6 @@ public class GunScript : MonoBehaviour
                 if (curAmmo >= 1)
                 {
                     Shoot();
-                }
-                else
-                {
-                    dryFire.Play();
                 }
             }
         }
@@ -95,15 +81,10 @@ public class GunScript : MonoBehaviour
                 Reload();
             }
         }
-        if(this.gameObject.activeInHierarchy == true)
-        {
-            LoadAllVariables();
-        }
     }
 
     public void Shoot()
     {
-        shootingSound.Play();
         Debug.Log("Shot!");
         curAmmo-- ;
         GameObject createdBullet = Instantiate(bullet, shootingPoint.transform.position, shootingPoint.transform.rotation);
@@ -118,18 +99,10 @@ public class GunScript : MonoBehaviour
             clipAmmoText.text = maxClipAmmo.ToString();
             curAmmo += clipSize;
             curAmmoText.text = curAmmo.ToString();
-            reloadSound.Play();
         }
         else
         {
             return;
         }
-    }
-
-    public void LoadAllVariables()
-    {
-        curAmmoText.text = curAmmo.ToString();
-        clipAmmoText.text = maxClipAmmo.ToString();
-        equippedGunText.text = gunName;
     }
 }
