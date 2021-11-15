@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
     [Header("PlayerMovement")]
     public int movementSpeed;
 
+    [Header("Gun")]
+    public GameObject assaultRifle;
+    public GameObject pistol;
+    public GameObject equippedGun;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,6 +43,28 @@ public class PlayerController : MonoBehaviour
         {
             transform.LookAt(hit.point); // Look at the point
             transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, 0)); // Clamp the x and z rotation
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SwapGun();
+        }
+    }
+    public void SwapGun()
+    {
+        if(pistol.activeInHierarchy == true)
+        {
+            pistol.SetActive(false);
+            assaultRifle.SetActive(true);
+            equippedGun = assaultRifle;
+            return;
+        }
+        if(assaultRifle.activeInHierarchy == true)
+        {
+            assaultRifle.SetActive(false);
+            pistol.SetActive(true);
+            equippedGun = pistol;
+            return;
         }
     }
 }
