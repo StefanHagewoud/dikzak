@@ -8,7 +8,6 @@ public class GunScript : MonoBehaviour
     public GameObject player;
 
     [Header("Gun Settings")]
-    public GameObject equippedGun;
     public int blastPower;
     public int damage;
     public GameObject shootingPoint;
