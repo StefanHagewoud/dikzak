@@ -12,6 +12,7 @@ public class GunScript : MonoBehaviour
     public int damage;
     public GameObject shootingPoint;
     public bool automaticGun;
+    public string gunName;
 
     [Header("Ammo Settings")]
     public GameObject bullet;
@@ -23,6 +24,7 @@ public class GunScript : MonoBehaviour
     [Header("Gun Text UI")]
     public Text clipAmmoText;
     public Text curAmmoText;
+    public Text equippedGunText;
 
     [Header("Automatic Gun Settings")]
     public float fireRate;
@@ -113,5 +115,6 @@ public class GunScript : MonoBehaviour
     {
         curAmmoText.text = curAmmo.ToString();
         clipAmmoText.text = maxClipAmmo.ToString();
+        equippedGunText.text = gunName;
     }
 }
