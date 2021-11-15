@@ -17,7 +17,7 @@ public class GunScript : MonoBehaviour
     public GameObject bullet;
     public int maxAmmo;
     public int curAmmo;
-    private int maxClipAmmo;
+    public int maxClipAmmo;
     private int clipSize;
 
     [Header("Gun Text UI")]
@@ -80,6 +80,10 @@ public class GunScript : MonoBehaviour
                 Reload();
             }
         }
+        if(this.gameObject.activeInHierarchy == true)
+        {
+            LoadAllVariables();
+        }
     }
 
     public void Shoot()
@@ -103,5 +107,11 @@ public class GunScript : MonoBehaviour
         {
             return;
         }
+    }
+
+    public void LoadAllVariables()
+    {
+        curAmmoText.text = curAmmo.ToString();
+        clipAmmoText.text = maxClipAmmo.ToString();
     }
 }
