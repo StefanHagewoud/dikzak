@@ -12,35 +12,10 @@ public class PlayerController : MonoBehaviour
     [Header("PlayerMovement")]
     public int movementSpeed;
 
-    [Header("Gun Settings")]
-    public GameObject gun;
-    public int blastPower;
-    public int damage;
-    public GameObject shootingPoint;
-
-    [Header("Ammo Settings")]
-    public GameObject bullet;
-    public int maxAmmo;
-    public int curAmmo;
-    private int maxClipAmmo;
-    private int clipSize;
-
-    [Header("Gun Text UI")]
-    public Text clipAmmoText;
-    public Text curAmmoText;
-
-
     // Start is called before the first frame update
     void Start()
     {
-        //Current Ammo
-        curAmmo = maxAmmo;
-        curAmmoText.text = curAmmo.ToString();
-        clipSize = maxAmmo;
 
-        //Max Clip Ammo
-        maxClipAmmo = maxAmmo * 15;
-        clipAmmoText.text = maxClipAmmo.ToString();
     }
 
     // Update is called once per frame
@@ -63,46 +38,6 @@ public class PlayerController : MonoBehaviour
         {
             transform.LookAt(hit.point); // Look at the point
             transform.rotation = Quaternion.Euler(new Vector3(0, transform.rotation.eulerAngles.y, 0)); // Clamp the x and z rotation
-        }
-
-        //Shooting
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (curAmmo >= 1)
-            {
-                Shoot();
-                Debug.Log("It works");
-            }
-        }
-
-        //Reloading
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            if(curAmmo == 0)
-            {
-                Reload();
-            }
-        }
-    }
-    public void Shoot()
-    {
-        Debug.Log("Shot!");
-        curAmmo--;
-        GameObject createdBullet = Instantiate(bullet, shootingPoint.transform.position, shootingPoint.transform.rotation);
-        createdBullet.GetComponent<Rigidbody>().velocity = shootingPoint.transform.forward * blastPower;
-        curAmmoText.text = curAmmo.ToString();
-    }
-    public void Reload()
-    {
-        if (maxClipAmmo >= 1)
-        {
-            maxClipAmmo -= clipSize;
-            clipAmmoText.text = maxClipAmmo.ToString();
-            curAmmo += clipSize;
-            curAmmoText.text = curAmmo.ToString();
-        } else
-        {
-            return;
         }
     }
 }
