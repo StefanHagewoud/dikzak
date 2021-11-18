@@ -30,6 +30,10 @@ public class GunScript : MonoBehaviour
     public float fireRate;
     public float lastfired;
 
+    [Header("Sound Settings")]
+    public AudioSource shootingSound;
+    public AudioSource reloadSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +94,7 @@ public class GunScript : MonoBehaviour
 
     public void Shoot()
     {
+        shootingSound.Play();
         Debug.Log("Shot!");
         curAmmo-- ;
         GameObject createdBullet = Instantiate(bullet, shootingPoint.transform.position, shootingPoint.transform.rotation);
@@ -104,6 +109,7 @@ public class GunScript : MonoBehaviour
             clipAmmoText.text = maxClipAmmo.ToString();
             curAmmo += clipSize;
             curAmmoText.text = curAmmo.ToString();
+            reloadSound.Play();
         }
         else
         {
