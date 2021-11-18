@@ -418,7 +418,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4710701892073209842}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnCreateRoomButtonClicked
         m_Mode: 1
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4710701892073209842}
         m_TargetAssemblyTypeName: 
         m_MethodName: SetActivePanel
         m_Mode: 5
@@ -880,6 +880,7 @@ GameObject:
   - component: {fileID: 4710701891997987706}
   - component: {fileID: 4710701891997987704}
   - component: {fileID: 4710701891997987705}
+  - component: {fileID: 4710701891997987711}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -948,6 +949,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Create Room
+--- !u!114 &4710701891997987711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701891997987707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d234639538a34b8d9e3cc6362a7afd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selectable: {fileID: 0}
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &4710701892073209852
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,6 +974,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4710701892073209843}
   - component: {fileID: 4710701892073209841}
+  - component: {fileID: 4710701892073209842}
+  - component: {fileID: 4710701892073209840}
   m_Layer: 5
   m_Name: MainPanel
   m_TagString: Untagged
@@ -998,6 +1016,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4710701892073209852}
   m_CullTransparentMesh: 1
+--- !u!114 &4710701892073209842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701892073209852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84fd812a67908014cb408f749ca7a55e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoginPanel: {fileID: 4710701893291037110}
+  PlayerNameInput: {fileID: 4710701892920469861}
+  SelectionPanel: {fileID: 4710701892483718432}
+  CreateRoomPanel: {fileID: 4710701891842509645}
+  RoomNameInputField: {fileID: 4710701891711517123}
+  MaxPlayersInputField: {fileID: 4710701892605259596}
+  JoinRandomRoomPanel: {fileID: 4710701893638865555}
+  RoomListPanel: {fileID: 4710701893301881455}
+  RoomListContent: {fileID: 4710701893500394309}
+  RoomListEntryPrefab: {fileID: 114706, guid: 03c5e15309335324fba99d68e38cb08b, type: 3}
+  InsideRoomPanel: {fileID: 4710701891815562908}
+  StartGameButton: {fileID: 4710701893661039373}
+  PlayerListEntryPrefab: {fileID: 195212, guid: d68bf8413681d9b4aa7328277e632e3f, type: 3}
+  sceneLoader: SampleScene
+--- !u!114 &4710701892073209840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701892073209852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28dd60f6abf16d4094cf0f642a043e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dontDestroyOnLoad: 0
 --- !u!1 &4710701892154522555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,6 +1066,7 @@ GameObject:
   - component: {fileID: 4710701892154522554}
   - component: {fileID: 4710701892154522552}
   - component: {fileID: 4710701892154522553}
+  - component: {fileID: 4710701892154522559}
   m_Layer: 5
   m_Name: TopPanel
   m_TagString: Untagged
@@ -1076,6 +1134,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4710701892154522559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701892154522555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe0a55ef565e3984f8866c5c91e3c2fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConnectionStatusText: {fileID: 4710701893630766123}
 --- !u!1 &4710701892357347369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1237,7 @@ GameObject:
   - component: {fileID: 4710701892398861521}
   - component: {fileID: 4710701892398861527}
   - component: {fileID: 4710701892398861520}
+  - component: {fileID: 4710701892398861526}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1234,6 +1306,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Back
+--- !u!114 &4710701892398861526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701892398861522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d234639538a34b8d9e3cc6362a7afd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selectable: {fileID: 0}
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &4710701892440902046
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,7 +1631,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4710701892073209842}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnBackButtonClicked
         m_Mode: 1
@@ -1943,7 +2030,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4710701892073209842}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnLoginButtonClicked
         m_Mode: 1
@@ -2077,7 +2164,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4710701892073209842}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnJoinRandomRoomButtonClicked
         m_Mode: 1
@@ -2415,6 +2502,7 @@ GameObject:
   - component: {fileID: 4710701892885943867}
   - component: {fileID: 4710701892885943865}
   - component: {fileID: 4710701892885943866}
+  - component: {fileID: 4710701892885943864}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2483,6 +2571,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Start Game
+--- !u!114 &4710701892885943864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701892885943844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d234639538a34b8d9e3cc6362a7afd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selectable: {fileID: 0}
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &4710701892920469856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,6 +2815,7 @@ GameObject:
   - component: {fileID: 4710701893019019631}
   - component: {fileID: 4710701893019019629}
   - component: {fileID: 4710701893019019630}
+  - component: {fileID: 4710701893019019628}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -2780,6 +2884,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Show Room List
+--- !u!114 &4710701893019019628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701893019019624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d234639538a34b8d9e3cc6362a7afd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selectable: {fileID: 0}
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &4710701893092279854
 GameObject:
   m_ObjectHideFlags: 0
@@ -2980,7 +3099,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4710701892073209842}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnBackButtonClicked
         m_Mode: 1
@@ -3204,7 +3323,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4710701892073209842}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnLeaveGameButtonClicked
         m_Mode: 1
@@ -3247,6 +3366,7 @@ GameObject:
   - component: {fileID: 4710701893288047763}
   - component: {fileID: 4710701893288047761}
   - component: {fileID: 4710701893288047762}
+  - component: {fileID: 4710701893288047760}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -3315,6 +3435,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Leave Game
+--- !u!114 &4710701893288047760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701893288047772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d234639538a34b8d9e3cc6362a7afd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selectable: {fileID: 0}
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &4710701893291037110
 GameObject:
   m_ObjectHideFlags: 0
@@ -3758,7 +3893,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4710701892073209842}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnRoomListButtonClicked
         m_Mode: 1
@@ -4053,6 +4188,7 @@ GameObject:
   - component: {fileID: 4710701893456388633}
   - component: {fileID: 4710701893456388639}
   - component: {fileID: 4710701893456388632}
+  - component: {fileID: 4710701893456388638}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4121,6 +4257,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Login
+--- !u!114 &4710701893456388638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701893456388634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d234639538a34b8d9e3cc6362a7afd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selectable: {fileID: 0}
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &4710701893500394309
 GameObject:
   m_ObjectHideFlags: 0
@@ -4194,6 +4345,7 @@ GameObject:
   - component: {fileID: 4710701893561885425}
   - component: {fileID: 4710701893561885431}
   - component: {fileID: 4710701893561885424}
+  - component: {fileID: 4710701893561885430}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4262,6 +4414,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Join Random Room
+--- !u!114 &4710701893561885430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701893561885426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d234639538a34b8d9e3cc6362a7afd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selectable: {fileID: 0}
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &4710701893630766165
 GameObject:
   m_ObjectHideFlags: 0
@@ -4566,7 +4733,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 4710701892073209842}
         m_TargetAssemblyTypeName: 
         m_MethodName: OnStartGameButtonClicked
         m_Mode: 1
@@ -4688,6 +4855,7 @@ GameObject:
   - component: {fileID: 4710701893680008750}
   - component: {fileID: 4710701893680008748}
   - component: {fileID: 4710701893680008749}
+  - component: {fileID: 4710701893680008739}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4756,6 +4924,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Cancel
+--- !u!114 &4710701893680008739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701893680008751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d234639538a34b8d9e3cc6362a7afd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selectable: {fileID: 0}
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &4710701893696041272
 GameObject:
   m_ObjectHideFlags: 0
@@ -4767,6 +4950,7 @@ GameObject:
   - component: {fileID: 4710701893696041279}
   - component: {fileID: 4710701893696041277}
   - component: {fileID: 4710701893696041278}
+  - component: {fileID: 4710701893696041276}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -4835,6 +5019,21 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Create Room
+--- !u!114 &4710701893696041276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4710701893696041272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d234639538a34b8d9e3cc6362a7afd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Selectable: {fileID: 0}
+  NormalColor: {r: 1, g: 1, b: 1, a: 1}
+  HoverColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1 &4710701893758707671
 GameObject:
   m_ObjectHideFlags: 0
