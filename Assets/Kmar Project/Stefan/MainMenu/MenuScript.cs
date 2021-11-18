@@ -28,6 +28,7 @@ public class MenuScript : MonoBehaviour
     {
         if (button.gameObject.name == "Settings")
         {
+            waiter(1);
             mainMenu.SetActive(false);
             settingsMenu.SetActive(true);
             levelSelectMenu.SetActive(false);
@@ -44,6 +45,11 @@ public class MenuScript : MonoBehaviour
             settingsMenu.SetActive(false);
             levelSelectMenu.SetActive(true);
         }
+    }
+
+    public IEnumerator waiter(int seconds)
+    {
+        yield return new WaitForSecondsRealtime(seconds);
     }
 
     public void StartLevel()
