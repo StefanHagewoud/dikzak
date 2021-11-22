@@ -9,6 +9,7 @@ public class PatrollScript : MonoBehaviour
 
     private int waypointIndex;
     private float dist;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class PatrollScript : MonoBehaviour
         Patrol();
     }
 
-    void Patrol()
+    public void Patrol()
     {
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
