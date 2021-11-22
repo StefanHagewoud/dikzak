@@ -9,10 +9,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - WhatIsPlayer
   - Water
   - UI
-  - PostProcessing
+  - WhatIsGround
   - 
   - 
   - 
@@ -41,4 +41,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: WhatIsplayer
+    uniqueID: 3168505929
+    locked: 0
+  - name: WhatIsGround
+    uniqueID: 2344641689
     locked: 0
