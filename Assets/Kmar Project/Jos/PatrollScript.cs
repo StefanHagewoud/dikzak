@@ -20,6 +20,7 @@ public class PatrollScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.LookAt(waypoints[waypointIndex].position);
         dist = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
         if(dist < 1f)
         {
