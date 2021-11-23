@@ -12,6 +12,7 @@ namespace Bolt.Samples.MoveAndShoot
 		[SerializeField] private Button startServerButton;
 		[SerializeField] private Button joinRandomButton;
 		[SerializeField] private Button joinSessionButton;
+		[SerializeField] private Button browseServersButton;
 
 		[SerializeField] private string gameLevel;
 		public InputField mainInputField;
@@ -32,9 +33,8 @@ namespace Bolt.Samples.MoveAndShoot
 			mainInputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
 			numberGenerator = UnityEngine.Random.Range(1000, 50000);
 			matchName = numberGenerator.ToString();
-		}
-
-		private void OnDestroy()
+		} 
+        private void OnDestroy()
 		{
 			startServerButton.onClick.RemoveAllListeners();
 			joinRandomButton.onClick.RemoveAllListeners();
