@@ -446,7 +446,7 @@ MonoBehaviour:
   joinRandomButton: {fileID: 230104725}
   joinSessionButton: {fileID: 653134356}
   browseServersButton: {fileID: 1011864053}
-  gameLevel: Level2552
+  gameLevel: MoveAndShoot_Game
   mainInputField: {fileID: 1420174599}
   sessionText: 
   matchName: 0
