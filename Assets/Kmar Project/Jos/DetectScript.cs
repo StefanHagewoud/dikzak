@@ -7,6 +7,7 @@ public class DetectScript : MonoBehaviour
     bool detected;
     GameObject target;
     public Transform enemy;
+    public int Health;
 
     public GameObject bullet;
     public Transform shootPoint;
@@ -28,7 +29,7 @@ public class DetectScript : MonoBehaviour
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
             GetComponent<PatrollScript>().enabled = false;
-            //enemy.LookAt(target.transform);
+            enemy.LookAt(target.transform);
         }
     }
 
@@ -61,9 +62,10 @@ public class DetectScript : MonoBehaviour
         {
             detected = false;
             GetComponent<PatrollScript>().enabled = true;
+            //enemy.LookAt(patrolPoint.transform);
         }
     }
-  
+
     private void ShootPlayer()
     {
         GameObject currentBullet = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
