@@ -31,7 +31,7 @@ namespace Bolt.Samples.MoveAndShoot
 			joinRandomButton.onClick.AddListener(StartClient);
 			joinSessionButton.onClick.AddListener(StartClient);
 			mainInputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
-			numberGenerator = UnityEngine.Random.Range(1000, 50000);
+			numberGenerator = UnityEngine.Random.Range(1000, 99999);
 			matchName = numberGenerator.ToString();
 		} 
         private void OnDestroy()

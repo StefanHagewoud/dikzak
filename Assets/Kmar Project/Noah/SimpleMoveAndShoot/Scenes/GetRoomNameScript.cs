@@ -12,24 +12,21 @@ using UnityEngine.UI;
 public class GetRoomNameScript : MonoBehaviour
 {
     [SerializeField] private Text hostNameText;
-    void Update()
+    void Start()   
     {
-        if (Input.GetKeyDown(KeyCode.I) && BoltNetwork.IsRunning)
+        var session = BoltMatchmaking.CurrentSession;
+
+        BoltLog.Warn(session.HostName);
+        hostNameText.text = session.HostName;
+
+        var photonSession = session as PhotonSession;
+        if (photonSession != null)
         {
-            var session = BoltMatchmaking.CurrentSession;
+            BoltLog.Warn("IsOpen: {0}, IsVisible: {1}", photonSession.IsOpen, photonSession.IsVisible);
 
-            BoltLog.Warn(session.HostName);
-            hostNameText.text = session.HostName;
-
-            var photonSession = session as PhotonSession;
-            if (photonSession != null)
+            foreach (var key in photonSession.Properties.Keys)
             {
-                BoltLog.Warn("IsOpen: {0}, IsVisible: {1}", photonSession.IsOpen, photonSession.IsVisible);
-
-                foreach (var key in photonSession.Properties.Keys)
-                {
-                    BoltLog.Warn("{0} = {1}", key, photonSession.Properties[key]);
-                }
+                BoltLog.Warn("{0} = {1}", key, photonSession.Properties[key]);
             }
         }
     }
