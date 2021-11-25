@@ -90,19 +90,19 @@ namespace Bolt.Samples.MoveAndShoot
 		}
 		public void FirstLevel()
         {
-			matchName = ("Level1");
+			gameLevel = ("Level1");
         }
 		public void SecondLevel()
 		{
-			matchName = ("Level2");
+			gameLevel = ("Level2");
 		}
 		public void ThirdLevel()
 		{
-			matchName = ("Level3");
+			gameLevel = ("Level3");
 		}
 		public void TutorialLevel()
 		{
-			matchName = ("Tutorial");
+			gameLevel = ("Tutorial");
 		}
 	}
 }
