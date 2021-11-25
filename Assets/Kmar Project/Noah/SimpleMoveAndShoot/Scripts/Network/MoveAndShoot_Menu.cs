@@ -9,16 +9,19 @@ namespace Bolt.Samples.MoveAndShoot
 	public class MoveAndShoot_Menu : GlobalEventListener
 	{
 		// UI
+		[Header("Buttons")]
 		[SerializeField] private Button startServerButton;
 		[SerializeField] private Button joinRandomButton;
 		[SerializeField] private Button joinSessionButton;
 		[SerializeField] private Button browseServersButton;
 
+		[Header("Match Settings")]
 		[SerializeField] private string gameLevel;
 		public InputField mainInputField;
 		public string sessionText;
 		public string matchName;
 		[SerializeField] private int numberGenerator;
+		[SerializeField] private Text moeilijkheidsGraadText;
 
 		void Awake()
 		{
@@ -90,19 +93,23 @@ namespace Bolt.Samples.MoveAndShoot
 		}
 		public void FirstLevel()
         {
-			gameLevel = ("Level1");
+			gameLevel = ("Makkelijk");
+			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad : ", gameLevel);
         }
 		public void SecondLevel()
 		{
-			gameLevel = ("Level2");
+			gameLevel = ("Gemiddeld");
+			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad: ", gameLevel);
 		}
 		public void ThirdLevel()
 		{
-			gameLevel = ("Level3");
+			gameLevel = ("Moeilijk");
+			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad : ", gameLevel);
 		}
 		public void TutorialLevel()
 		{
 			gameLevel = ("Tutorial");
+			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad : ", gameLevel);
 		}
 	}
 }
