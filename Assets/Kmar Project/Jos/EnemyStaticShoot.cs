@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectScript : MonoBehaviour
+public class EnemyStaticShoot : MonoBehaviour
 {
     bool detected;
     GameObject target;
@@ -33,8 +33,8 @@ public class DetectScript : MonoBehaviour
         if (detected)
         {
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
-            GetComponent<PatrollScript>().enabled = false;
             //enemy.LookAt(target.transform);
+
             direction = (lookTarget.position - transform.position).normalized;
             rotGoal = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotGoal, turnSpeed);
@@ -69,8 +69,6 @@ public class DetectScript : MonoBehaviour
         if (other.tag == "Player")
         {
             detected = false;
-            GetComponent<PatrollScript>().enabled = true;
-            //enemy.LookAt(patrolPoint.transform);
         }
     }
 

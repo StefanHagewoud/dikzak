@@ -7,6 +7,10 @@ public class PatrollScript : MonoBehaviour
     public Transform[] waypoints;
     public int speed;
 
+    public float turnSpeed = 0.2f;
+    Quaternion rotGoal;
+    Vector3 direction;
+
     private int waypointIndex;
     private float dist;
     
@@ -14,13 +18,17 @@ public class PatrollScript : MonoBehaviour
     void Start()
     {
         waypointIndex = 0;
-        transform.LookAt(waypoints[waypointIndex].position);
+        //transform.LookAt(waypoints[waypointIndex].position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(waypoints[waypointIndex].position);
+        //transform.LookAt(waypoints[waypointIndex].position);
+        direction = (waypoints[waypointIndex].position - transform.position).normalized;
+        rotGoal = Quaternion.LookRotation(direction);
+        transform.rotation = Quaternion.Slerp(transform.rotation, rotGoal, turnSpeed);
+
         dist = Vector3.Distance(transform.position, waypoints[waypointIndex].position);
         if(dist < 1f)
         {
@@ -40,6 +48,6 @@ public class PatrollScript : MonoBehaviour
         {
             waypointIndex = 0;
         }
-        transform.LookAt(waypoints[waypointIndex].position);
+        //transform.LookAt(waypoints[waypointIndex].position);
     }
 }
