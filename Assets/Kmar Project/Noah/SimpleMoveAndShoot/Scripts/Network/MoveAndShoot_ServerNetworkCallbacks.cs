@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 
 namespace Bolt.Samples.MoveAndShoot
 {
-	[BoltGlobalBehaviour(BoltNetworkModes.Server, "SimpleMoveAndShoot_Game")]
+	[BoltGlobalBehaviour(BoltNetworkModes.Server, "MoveAndShoot_Game")]
 	public class MoveAndShoot_ServerNetworkCallbacks : GlobalEventListener
 	{
 		public override void SceneLoadLocalDone(string scene, IProtocolToken token)
