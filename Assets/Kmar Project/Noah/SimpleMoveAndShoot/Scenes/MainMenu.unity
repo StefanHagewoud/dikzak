@@ -1208,6 +1208,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2066204534026553798, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: minPlayers
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066204534026553798, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: uiTopPanel
       value: 
       objectReference: {fileID: 2057383560}
@@ -1216,9 +1220,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 173751339}
     - target: {fileID: 2066204534026553798, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: lobbyInstantiate
+      value: 
+      objectReference: {fileID: 6541639938420243429, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+    - target: {fileID: 2066204534026553798, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: uiCountdownPanel
       value: 
       objectReference: {fileID: 498916718}
+    - target: {fileID: 2066204534026553798, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: gameScene.sceneName
+      value: Kmar Project/Noah/SimpleMoveAndShoot/Scenes/MoveAndShoot_Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066204534026553798, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: gameScene.sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 43598e4fa93e64ff4a7cbe31b745329f, type: 3}
+    - target: {fileID: 2066204534026553798, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: lobbyScene.sceneName
+      value: Kmar Project/Noah/SimpleMoveAndShoot/Scenes/MainMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066204534026553798, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: lobbyScene.sceneAsset
+      value: 
+      objectReference: {fileID: 102900000, guid: 6b066de7032734a7c90042c275f688b2, type: 3}
     - target: {fileID: 2254625154390705272, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1235,6 +1259,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -69
       objectReference: {fileID: 0}
+    - target: {fileID: 3114145910043055667, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 6541639938420243429, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+    - target: {fileID: 3114145910043055667, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: addButtonRow
+      value: 
+      objectReference: {fileID: 7677225722346603140, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
     - target: {fileID: 4512011595873522769, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1967,6 +1999,34 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 161020, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 178410, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432700, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432700, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432700, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1860
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432700, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22432700, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1860
+      objectReference: {fileID: 0}
     - target: {fileID: 22459552, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2049,6 +2109,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 22459552, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22495014, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22495014, guid: c0978251ff7b10d4fb954a4b56acd9f0, type: 3}
+      propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
