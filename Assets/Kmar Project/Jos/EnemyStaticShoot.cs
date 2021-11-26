@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class EnemyStaticShoot : MonoBehaviour
 {
-    bool detected;
-    GameObject target;
+    public bool detected;
+    public GameObject target;
     public Transform enemy;
     public int health;
 
-    public Transform lookTarget;
+    //public Transform lookTarget;
     public float turnSpeed = 0.2f;
     Quaternion rotGoal;
     Vector3 direction;
@@ -35,9 +35,9 @@ public class EnemyStaticShoot : MonoBehaviour
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
             //enemy.LookAt(target.transform);
 
-            direction = (lookTarget.position - transform.position).normalized;
+            direction = (target.transform.position - target.transform.position).normalized;
             rotGoal = Quaternion.LookRotation(direction);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotGoal, turnSpeed);
+            target.transform.rotation = Quaternion.Slerp(target.transform.rotation, rotGoal, turnSpeed);
         }
     }
 
