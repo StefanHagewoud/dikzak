@@ -68,7 +68,7 @@ namespace Bolt.Samples.Photon.Lobby
         private void StartServerEvent()
         {
             uiInfoPanel.Display("Creating Room...");
-            StartServerEventHandler(uiMainMenu.MatchName);
+            StartServerEventHandler(uiMainMenu.matchName);
         }
 
         private void StartClientEvent()
