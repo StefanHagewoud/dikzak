@@ -9,11 +9,14 @@ namespace Bolt.Samples.MoveAndShoot
 	public class MoveAndShoot_Menu : GlobalEventListener
 	{
 		// UI
-		[Header("Buttons")]
-		[SerializeField] private Button startServerButton;
-		[SerializeField] private Button joinRandomButton;
+		[Header("Important Buttons")]
+		[SerializeField] private Button createRoomButton;
 		[SerializeField] private Button joinSessionButton;
+		[SerializeField] private Button startLevelButton;
+
+		[Header("Not Necessary Buttons")]
 		[SerializeField] private Button browseServersButton;
+		[SerializeField] private Button joinRandomButton;
 
 		[Header("Match Settings")]
 		[SerializeField] private string gameLevel;
@@ -30,16 +33,20 @@ namespace Bolt.Samples.MoveAndShoot
 
 		void Start()
 		{
-			startServerButton.onClick.AddListener(StartServer);
+			createRoomButton.onClick.AddListener(StartServer);
 			joinRandomButton.onClick.AddListener(StartClient);
 			joinSessionButton.onClick.AddListener(StartClient);
+
+			//Check if Input field is Changed
 			mainInputField.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+
+			//NumberGenerator for Room
 			numberGenerator = UnityEngine.Random.Range(1000, 99999);
 			matchName = numberGenerator.ToString();
 		} 
         private void OnDestroy()
 		{
-			startServerButton.onClick.RemoveAllListeners();
+			createRoomButton.onClick.RemoveAllListeners();
 			joinRandomButton.onClick.RemoveAllListeners();
 			joinSessionButton.onClick.RemoveAllListeners();
 			mainInputField.onValueChanged.RemoveAllListeners();
@@ -80,7 +87,6 @@ namespace Bolt.Samples.MoveAndShoot
 			{
 				if (sessionText == "")
 				{
-					BoltMatchmaking.JoinRandomSession();
 					Debug.Log("Failed");
 					return;
 				}
@@ -94,22 +100,22 @@ namespace Bolt.Samples.MoveAndShoot
 		public void FirstLevel()
         {
 			gameLevel = ("Makkelijk");
-			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad : ", gameLevel);
+			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad: Makkelijk");
         }
 		public void SecondLevel()
 		{
 			gameLevel = ("Gemiddeld");
-			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad: ", gameLevel);
+			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad: Gemiddeld");
 		}
 		public void ThirdLevel()
 		{
 			gameLevel = ("Moeilijk");
-			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad : ", gameLevel);
+			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad: Moeilijk");
 		}
 		public void TutorialLevel()
 		{
 			gameLevel = ("Tutorial");
-			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad : ", gameLevel);
+			moeilijkheidsGraadText.text = string.Format("Moeilijkheidsgraad: Tutorial");
 		}
 	}
 }
