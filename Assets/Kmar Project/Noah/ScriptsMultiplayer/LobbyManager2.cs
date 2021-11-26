@@ -29,6 +29,8 @@ namespace Bolt.Samples.Photon.Lobby
 		private string matchName;
 		private bool randomJoin = false;
 
+		[SerializeField] private GameObject lobbyInstantiate;
+
 		private void Awake()
 		{
 			BoltLauncher.SetUdpPlatform(new PhotonPlatform());

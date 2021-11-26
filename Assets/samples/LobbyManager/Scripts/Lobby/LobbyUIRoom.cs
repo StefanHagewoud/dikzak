@@ -85,7 +85,8 @@ namespace Bolt.Samples.Photon.Lobby
             foreach (LobbyPlayer p in _players)
             {
                 p.OnPlayerListChanged(i);
-                ++i;
+                ++i; 
+
             }
         }
 
