@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class DetectScript : MonoBehaviour
 {
-    bool detected;
-    GameObject target;
+    public bool detected;
+    public GameObject target;
     public Transform enemy;
     public int health;
 
-    public Transform lookTarget;
+    //public Transform lookTarget;
     public float turnSpeed = 0.2f;
     Quaternion rotGoal;
     Vector3 direction;
@@ -35,7 +35,7 @@ public class DetectScript : MonoBehaviour
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
             GetComponent<PatrollScript>().enabled = false;
             //enemy.LookAt(target.transform);
-            direction = (lookTarget.position - transform.position).normalized;
+            direction = (target.transform.position - transform.position).normalized;
             rotGoal = Quaternion.LookRotation(direction);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotGoal, turnSpeed);
         }
@@ -77,8 +77,8 @@ public class DetectScript : MonoBehaviour
     private void ShootPlayer()
     {
         GameObject currentBullet = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
-        Rigidbody rig = currentBullet.GetComponent<Rigidbody>();
+        //Rigidbody rig = currentBullet.GetComponent<Rigidbody>();
 
-        rig.AddForce(transform.forward * shootSpeed, ForceMode.VelocityChange);
+        //rig.AddForce(transform.forward * shootSpeed, ForceMode.VelocityChange);
     }
 }
