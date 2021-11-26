@@ -10,21 +10,23 @@ namespace Bolt.Samples.Photon.Lobby
         public event Action OnBrowseServerClick;
         public event Action OnJoinRandomClick;
 
-        public string MatchName
-        {
-            get { return matchNameInput.text; }
-        }
+        public string matchName;
         
         [Header("Server UI")]
-        [SerializeField] private InputField matchNameInput;
+        //[SerializeField] private InputField matchNameInput;
         [SerializeField] private Button createRoomButton;
 
         [Header("Client UI")]
         [SerializeField] private Button browseServersButton;
         [SerializeField] private Button joinRandomButton;
-        
+        [SerializeField] private int numberGenerator;
+
         public void OnEnable()
         {
+            //NumberGenerator for Room
+            numberGenerator = UnityEngine.Random.Range(1000, 99999);
+            matchName = numberGenerator.ToString();
+
             createRoomButton.onClick.RemoveAllListeners();
             createRoomButton.onClick.AddListener(() =>
             {
@@ -42,8 +44,6 @@ namespace Bolt.Samples.Photon.Lobby
             {
                 if (OnJoinRandomClick != null) OnJoinRandomClick();
             });
-
-            matchNameInput.text = Guid.NewGuid().ToString();
         }
 
         public void ToggleVisibility(bool visible)
