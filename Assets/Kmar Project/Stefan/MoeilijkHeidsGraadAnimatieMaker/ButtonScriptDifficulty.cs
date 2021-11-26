@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ButtonScriptDifficulty : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class ButtonScriptDifficulty : MonoBehaviour
 
     public GameObject rightButton;
     public GameObject leftButton;
+
+    public float enableTime;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,12 @@ public class ButtonScriptDifficulty : MonoBehaviour
         buttonAnimator.SetTrigger("ButtonPressed");
         leftButton.SetActive(false);
         rightButton.SetActive(true);
+        StartCoroutine(StartEnable());
+    }
+
+    IEnumerator StartEnable()
+    {
+        yield return new WaitForSeconds(enableTime);
         startLevel.SetActive(true);
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace Bolt.Samples.Photon.Lobby
 {
-    public partial class LobbyManager
+    public partial class LobbyManager2
     {
         [Space]
         [Header("UI Reference", order = 2)]
@@ -16,10 +16,10 @@ namespace Bolt.Samples.Photon.Lobby
         [SerializeField] private LobbyUIMainMenu uiMainMenu;
         [SerializeField] private LobbyUIRoom uiRoom;
         [SerializeField] private LobbyUIServerList uiServerList;
-        
+
         [SerializeField] private LobbyUIInfoPanel uiInfoPanel;
         [SerializeField] private LobbyUICountdownPanel uiCountdownPanel;
-        
+
         private bool sceneFlag = false;
         private ILobbyUI _currentPanel;
 
@@ -39,26 +39,26 @@ namespace Bolt.Samples.Photon.Lobby
         private void StartUI()
         {
             ResetUI();
-            
+
             // Setup Main Menu
             uiMainMenu.OnCreateButtonClick += StartServerEvent;
             uiMainMenu.OnBrowseServerClick += StartClientEvent;
             uiMainMenu.OnJoinRandomClick += StartClientRandomEvent;
             uiMainMenu.ToggleVisibility(true);
-            
+
             // Setup Browse Session
-            uiServerList.OnClickJoinSession += JoinSessionEvent;  
+            uiServerList.OnClickJoinSession += JoinSessionEvent;
         }
 
         private void LoadingUI()
         {
             uiInfoPanel.Display("Please wait...");
         }
-        
+
         private void ResetUI()
         {
             uiServerList.ResetUI();
-            
+
             uiInfoPanel.ToggleVisibility(false);
             uiTopPanel.ToggleVisibility(true);
             uiTopPanel.SetHeaderInfo("Offline", "None", "None");
@@ -88,16 +88,16 @@ namespace Bolt.Samples.Photon.Lobby
             uiInfoPanel.Display("Connecting to Session...");
             JoinEventHandler(session);
         }
-        
+
         private void SessionCreatedUIHandler(UdpSession session)
         {
             uiInfoPanel.ToggleVisibility(false);
-            
+
             object region;
             BoltMatchmaking.CurrentMetadata.TryGetValue("region", out region);
-            
+
             //uiTopPanel.SetHeaderInfo("Host", "self", ((string) region).ToUpper());
-            
+
             ChangeBodyTo(uiRoom);
         }
 
@@ -105,19 +105,19 @@ namespace Bolt.Samples.Photon.Lobby
         {
             uiInfoPanel.ToggleVisibility(false);
             ChangeBodyTo(uiServerList);
-            
+
             uiTopPanel.SetHeaderInfo("Client", "None", "None");
         }
 
         private void ClientConnectedUIHandler()
         {
             uiInfoPanel.ToggleVisibility(false);
-            
+
             object region;
             BoltMatchmaking.CurrentMetadata.TryGetValue("region", out region);
-            
-            uiTopPanel.SetHeaderInfo("Client", BoltMatchmaking.CurrentSession.HostName, ((string) region).ToUpper());
-            
+
+            uiTopPanel.SetHeaderInfo("Client", BoltMatchmaking.CurrentSession.HostName, ((string)region).ToUpper());
+
             ChangeBodyTo(uiRoom);
         }
 
@@ -127,8 +127,8 @@ namespace Bolt.Samples.Photon.Lobby
             uiRoom.AddPlayer(lobbyPlayer);
         }
 
-		private void EntityDetachedEventHandler(BoltEntity entity)
-		{
+        private void EntityDetachedEventHandler(BoltEntity entity)
+        {
             var lobbyPlayer = entity.gameObject.GetComponent<LobbyPlayer>();
             uiRoom.RemovePlayer(lobbyPlayer);
         }
@@ -170,7 +170,7 @@ namespace Bolt.Samples.Photon.Lobby
                 if (lobbyScene.SimpleSceneName == scene)
                 {
                     ChangeBodyTo(uiMainMenu);
-                    
+
                     uiTopPanel.HideBackButton();
                     uiTopPanel.SetInGame(false);
                     sceneFlag = true;
@@ -178,19 +178,20 @@ namespace Bolt.Samples.Photon.Lobby
                 else
                 {
                     ChangeBodyTo(null);
-                    
+
                     uiTopPanel.SetInGame(true);
                     uiTopPanel.ToggleVisibility(false);
                     uiTopPanel.SetupBackButton("Menu", ShutdownEventHandler);
                     sceneFlag = false;
                 }
 
-            } catch (Exception e)
+            }
+            catch (Exception e)
             {
                 BoltLog.Error(e);
             }
         }
-        
+
         public override void OnEvent(LobbyCountdown evt)
         {
             uiCountdownPanel.SetText(string.Format("Match Starting in {0}", evt.Time));
