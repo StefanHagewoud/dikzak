@@ -35,9 +35,9 @@ public class EnemyStaticShoot : MonoBehaviour
             GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
             //enemy.LookAt(target.transform);
 
-            direction = (target.transform.position - target.transform.position).normalized;
+            direction = (target.transform.position - transform.position).normalized;
             rotGoal = Quaternion.LookRotation(direction);
-            target.transform.rotation = Quaternion.Slerp(target.transform.rotation, rotGoal, turnSpeed);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotGoal, turnSpeed);
         }
     }
 
