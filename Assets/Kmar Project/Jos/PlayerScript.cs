@@ -7,10 +7,10 @@ public class PlayerScript : MonoBehaviour
 {
     public float horizontal;
     public float vertical;
-    public Vector3 move;
+    public Vector3 move; 
     public float speed;
 
-    public float health;
+    public float health = 100;
     
 
     // Update is called once per frame
@@ -24,6 +24,11 @@ public class PlayerScript : MonoBehaviour
         move.z = vertical;
 
         GetComponent<Transform>().Translate(move * Time.deltaTime * speed);
+
+        if(health<= 0)
+        {
+            Die();
+        }
     }
     
     //takeDamage
@@ -32,11 +37,14 @@ public class PlayerScript : MonoBehaviour
         health -= amount;
         if (health <= 0f)
         {
-            //Destroy(gameObject);
-            GameObject.Find("Enemy").GetComponent<PatrollScript>().enabled = true;
-            GameObject.Find("Enemy").GetComponent<DetectScript>().enabled = false;
-            Destroy(gameObject);
+            Die();
+            Debug.Log("PlayerDied!");
         }
     }
-   
+    public void Die()
+    {
+        transform.position = new Vector3(45, 3, 46);
+        GetComponent<PlayerScript>().enabled = false;
+        //deadscreen/GameOverScreen aanzetten
+    }
 }
