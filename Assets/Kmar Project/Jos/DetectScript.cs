@@ -32,7 +32,7 @@ public class DetectScript : MonoBehaviour
     {
         if (detected)
         {
-            GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
+            //GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePosition;
             GetComponent<PatrollScript>().enabled = false;
             //enemy.LookAt(target.transform);
             direction = (target.transform.position - transform.position).normalized;
