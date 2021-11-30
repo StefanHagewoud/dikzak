@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("trigger!");
+            Debug.Log("HitPlayer!");
             other.transform.GetComponent<PlayerScript>().TakeDamage(damage = 50); 
         }
     }
