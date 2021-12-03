@@ -574,8 +574,6 @@ MonoBehaviour:
   assaultRifle: {fileID: 407335837}
   pistol: {fileID: 1786705641}
   equippedGun: {fileID: 1786705641}
-  pistolShootingSound: {fileID: 0}
-  rifleShootingSound: {fileID: 0}
 --- !u!1 &546003323
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,8 +1877,6 @@ MonoBehaviour:
   assaultRifle: {fileID: 407335837}
   pistol: {fileID: 1786705641}
   equippedGun: {fileID: 1786705641}
-  pistolShootingSound: {fileID: 0}
-  rifleShootingSound: {fileID: 0}
 --- !u!54 &1693828134
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1920,7 +1916,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693828131}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 0d68f6b9099e76a40baa85e723e4254c, type: 3}
+  m_Avatar: {fileID: 9000000, guid: 1ea851c021c91a94c9990c3c054b133d, type: 3}
   m_Controller: {fileID: 9100000, guid: 3a68b42164b6a4244be40153a1de597e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
