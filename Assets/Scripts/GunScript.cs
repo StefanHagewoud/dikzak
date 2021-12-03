@@ -33,6 +33,7 @@ public class GunScript : MonoBehaviour
     [Header("Sound Settings")]
     public AudioSource shootingSound;
     public AudioSource reloadSound;
+    public AudioSource dryFire;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +66,10 @@ public class GunScript : MonoBehaviour
                         Shoot();
                     }
                 }
+                else
+                {
+                    dryFire.Play();
+                }
             }
         }
         else
@@ -74,6 +79,10 @@ public class GunScript : MonoBehaviour
                 if (curAmmo >= 1)
                 {
                     Shoot();
+                }
+                else
+                {
+                    dryFire.Play();
                 }
             }
         }
