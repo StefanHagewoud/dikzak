@@ -18,8 +18,6 @@ public class PlayerController : MonoBehaviour
     public GameObject assaultRifle;
     public GameObject pistol;
     public GameObject equippedGun;
-    public AudioSource pistolShootingSound;
-    public AudioSource rifleShootingSound;
 
 
     // Start is called before the first frame update
