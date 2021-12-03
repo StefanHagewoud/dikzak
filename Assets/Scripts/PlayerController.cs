@@ -11,19 +11,19 @@ public class PlayerController : MonoBehaviour
 
     [Header("PlayerMovement")]
     public int movementSpeed;
+    private Animator animator;
+    private Vector3 lastPos;
 
     [Header("Gun")]
     public GameObject assaultRifle;
     public GameObject pistol;
     public GameObject equippedGun;
-    public AudioSource pistolShootingSound;
-    public AudioSource rifleShootingSound;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -39,6 +39,16 @@ public class PlayerController : MonoBehaviour
 
         GetComponent<Transform>().Translate(move * Time.deltaTime * movementSpeed, Space.World);
 
+        if(this.gameObject.transform.position != lastPos)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
+        lastPos = this.gameObject.transform.position;
+
         //Camera
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
@@ -52,6 +62,9 @@ public class PlayerController : MonoBehaviour
         {
             SwapGun();
         }
+
+        //Juiste Geweer animaties
+        RightGunAnimations();
     }
     public void SwapGun()
     {
@@ -69,5 +82,19 @@ public class PlayerController : MonoBehaviour
             equippedGun = pistol;
             return;
         }
+    }
+    public void RightGunAnimations()
+    {
+        if (assaultRifle.activeInHierarchy == true)
+        {
+            animator.SetBool("assaultRifle", true);
+        }
+        else { animator.SetBool("assaultRifle", false); }
+
+        if (pistol.activeInHierarchy == true)
+        {
+            animator.SetBool("pistol", true);
+        }
+        else { animator.SetBool("pistol", false); }
     }
 }
