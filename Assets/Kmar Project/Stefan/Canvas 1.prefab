@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 3766184788831564319}
   - component: {fileID: 3766184788831564316}
   - component: {fileID: 3766184788831564317}
+  - component: {fileID: 416985303109373343}
   m_Layer: 5
   m_Name: KeyButton (3)
-  m_TagString: Untagged
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,6 +142,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &416985303109373343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184788831564315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d316db09ba2bda44aba9f92f16a8727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNumber: 0
+  keyText: {fileID: 0}
 --- !u!1 &3766184788862236421
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,9 +892,10 @@ GameObject:
   - component: {fileID: 3766184789068795183}
   - component: {fileID: 3766184789068795180}
   - component: {fileID: 3766184789068795181}
+  - component: {fileID: 1156063619019597564}
   m_Layer: 5
   m_Name: KeyButton (6)
-  m_TagString: Untagged
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1005,6 +1021,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1156063619019597564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184789068795179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d316db09ba2bda44aba9f92f16a8727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNumber: 0
+  keyText: {fileID: 0}
 --- !u!1 &3766184789099849453
 GameObject:
   m_ObjectHideFlags: 0
@@ -1294,9 +1324,10 @@ GameObject:
   - component: {fileID: 3766184789140596355}
   - component: {fileID: 3766184789140596352}
   - component: {fileID: 3766184789140596353}
+  - component: {fileID: 4345364104136420502}
   m_Layer: 5
   m_Name: KeyButton (1)
-  m_TagString: Untagged
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1422,6 +1453,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4345364104136420502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184789140596367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d316db09ba2bda44aba9f92f16a8727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNumber: 0
+  keyText: {fileID: 0}
 --- !u!1 &3766184789184544277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,9 +1838,10 @@ GameObject:
   - component: {fileID: 3766184789240046027}
   - component: {fileID: 3766184789240046024}
   - component: {fileID: 3766184789240046029}
+  - component: {fileID: 3005205160461467602}
   m_Layer: 5
   m_Name: KeyButton
-  m_TagString: Untagged
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1921,6 +1967,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3005205160461467602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184789240046038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d316db09ba2bda44aba9f92f16a8727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNumber: 0
+  keyText: {fileID: 0}
 --- !u!1 &3766184789240094434
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,9 +2152,10 @@ GameObject:
   - component: {fileID: 3766184789254536334}
   - component: {fileID: 3766184789254536335}
   - component: {fileID: 3766184789254536332}
+  - component: {fileID: 4872450346321672696}
   m_Layer: 5
   m_Name: KeyButton (4)
-  m_TagString: Untagged
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2220,6 +2281,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4872450346321672696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184789254536330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d316db09ba2bda44aba9f92f16a8727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNumber: 0
+  keyText: {fileID: 0}
 --- !u!1 &3766184789274398924
 GameObject:
   m_ObjectHideFlags: 0
@@ -3071,9 +3146,10 @@ GameObject:
   - component: {fileID: 3766184789490284419}
   - component: {fileID: 3766184789490284416}
   - component: {fileID: 3766184789490284417}
+  - component: {fileID: 2015871712734662563}
   m_Layer: 5
   m_Name: KeyButton (7)
-  m_TagString: Untagged
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3199,6 +3275,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2015871712734662563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184789490284431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d316db09ba2bda44aba9f92f16a8727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNumber: 0
+  keyText: {fileID: 0}
 --- !u!1 &3766184789519556741
 GameObject:
   m_ObjectHideFlags: 0
@@ -4108,13 +4198,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3766184789962152462}
+  - component: {fileID: 3428772848972223600}
   m_Layer: 5
   m_Name: EmptyKeys
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3766184789962152462
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4142,6 +4233,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -1820, y: -980}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &3428772848972223600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184789962152463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22eeeb70f0dcf04d958eee7d95ee2a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys: []
 --- !u!1 &3766184789977310635
 GameObject:
   m_ObjectHideFlags: 0
@@ -5752,7 +5856,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3766184790537206526
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5786,9 +5890,10 @@ GameObject:
   - component: {fileID: 3766184790550671303}
   - component: {fileID: 3766184790550671300}
   - component: {fileID: 3766184790550671301}
+  - component: {fileID: 23604170149574206}
   m_Layer: 5
   m_Name: KeyButton (5)
-  m_TagString: Untagged
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5914,6 +6019,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &23604170149574206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184790550671299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d316db09ba2bda44aba9f92f16a8727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNumber: 0
+  keyText: {fileID: 0}
 --- !u!1 &3766184790559532641
 GameObject:
   m_ObjectHideFlags: 0
@@ -6447,9 +6566,10 @@ GameObject:
   - component: {fileID: 3766184790654467925}
   - component: {fileID: 3766184790654467922}
   - component: {fileID: 3766184790654467923}
+  - component: {fileID: 5359771320302918255}
   m_Layer: 5
   m_Name: KeyButton (2)
-  m_TagString: Untagged
+  m_TagString: Keys
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6575,6 +6695,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5359771320302918255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184790654467921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d316db09ba2bda44aba9f92f16a8727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyNumber: 0
+  keyText: {fileID: 0}
 --- !u!1 &3766184790717721988
 GameObject:
   m_ObjectHideFlags: 0
