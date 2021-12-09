@@ -5,29 +5,32 @@ using UnityEngine.UI;
 
 public class BombTimer : MonoBehaviour
 {
-    float currentTime = 0f;
-    float startingTime = 59f;
-
-    [SerializeField] Text countdownText;
-
-    
-
-    
+    public float timeValue = 90;
+    public Text timerText;
     // Start is called before the first frame update
-    void Start()
-    {
-        currentTime = startingTime;
-    }
 
     // Update is called once per frame
     void Update()
     {
-        currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("00:00");
-
-        if (currentTime <= 0)
+        if(timeValue > 0)
         {
-            currentTime = 0;
+            timeValue -= Time.deltaTime;
         }
+        else
+        {
+            timeValue = 0;
+        }
+        DisplayTime(timeValue);
+    }
+    void DisplayTime(float timeToDisplay)
+    {
+        if(timeToDisplay < 0)
+        {
+            timeToDisplay = 0;
+        }
+        float minutes = Mathf.FloorToInt(timeToDisplay / 60);
+        float seconds = Mathf.FloorToInt(timeToDisplay % 60);
+
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }
