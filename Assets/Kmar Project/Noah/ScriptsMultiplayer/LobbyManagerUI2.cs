@@ -20,6 +20,8 @@ namespace Bolt.Samples.Photon.Lobby
         [SerializeField] private LobbyUIInfoPanel uiInfoPanel;
         [SerializeField] private LobbyUICountdownPanel uiCountdownPanel;
 
+        [SerializeField] private Button startGame;
+
         private bool sceneFlag = false;
         private ILobbyUI _currentPanel;
 

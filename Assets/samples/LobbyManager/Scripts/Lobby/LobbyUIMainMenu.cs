@@ -19,8 +19,28 @@ namespace Bolt.Samples.Photon.Lobby
         [Header("Client UI")]
         [SerializeField] private Button browseServersButton;
         [SerializeField] private Button joinRandomButton;
+
+        [Header("Join Room With Input")]
+        [SerializeField] private Button joinRoomWithInput;
+        public string sessionText;
+        [SerializeField] private InputField roomInput;
         [SerializeField] private int numberGenerator;
 
+
+        void Start()
+        {
+            roomInput.onValueChanged.AddListener(delegate { ValueChangeCheck(); });
+        }
+
+        private void OnDestroy()
+        {
+            roomInput.onValueChanged.RemoveAllListeners();
+        }
+        public void ValueChangeCheck()
+        {
+            Debug.Log("Value Changed");
+            sessionText = roomInput.text;
+        }
         public void OnEnable()
         {
             //NumberGenerator for Room
