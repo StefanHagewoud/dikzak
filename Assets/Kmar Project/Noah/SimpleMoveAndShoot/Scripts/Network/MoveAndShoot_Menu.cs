@@ -93,6 +93,7 @@ namespace Bolt.Samples.MoveAndShoot
 				else
 				{
 					BoltMatchmaking.JoinSession(sessionText);
+					
 					Debug.Log("Succeeded");
 				}
 			}

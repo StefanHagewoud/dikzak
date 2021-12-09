@@ -161,7 +161,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &224637420319532884
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1148,6 +1148,7 @@ MonoBehaviour:
   readyButton: {fileID: 114684161177044826}
   waitingPlayerButton: {fileID: 114787925832786310}
   removePlayerButton: {fileID: 114374586849277162}
+  playerName_c: {fileID: 6255554311269848996}
   localIcone: {fileID: 1525861905908290}
   remoteIcone: {fileID: 1099339242320142}
   OddRowColor: {r: 0.98039216, g: 0.98039216, b: 0.98039216, a: 1}
@@ -1166,7 +1167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sceneGuid: 
   _serializerGuid: b0a440aa-934d-409f-a29e-96da25445051
-  _prefabId: 10
+  _prefabId: 11
   _updateRate: 1
   _autoFreezeProxyFrames: 0
   _clientPredicted: 1
@@ -1769,3 +1770,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7677225722346603140, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
   m_PrefabInstance: {fileID: 5856748062936690884}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6255554311269848996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 547021145970009952, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+  m_PrefabInstance: {fileID: 5856748062936690884}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

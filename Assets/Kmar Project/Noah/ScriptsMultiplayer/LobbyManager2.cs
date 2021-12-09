@@ -26,10 +26,9 @@ namespace Bolt.Samples.Photon.Lobby
 		private float prematchCountdown = 5.0f;
 
 		private bool isCountdown = false;
-		private string matchName;
+		public string matchName;
 		private bool randomJoin = false;
 
-		[SerializeField] private GameObject lobbyInstantiate;
 		public string sceneThatGettingLoaded;
 
 		private void Awake()
@@ -57,15 +56,14 @@ namespace Bolt.Samples.Photon.Lobby
 		{
 			startGame.onClick.AddListener(StartButton);
 			StartUI();
-			//StartGamePlay();
+			StartGamePlay();
 		}
-		/*
+
 		private void StartGamePlay()
 		{
 			Debug.Log(string.Format("Lobby Scene: {0}", lobbyScene.SimpleSceneName));
 			Debug.Log(string.Format("Game Scene: {0}", gameScene.SimpleSceneName));
 		}
-		*/
 		// Game Loop
 
 		public void StartButton()
@@ -180,6 +178,9 @@ namespace Bolt.Samples.Photon.Lobby
 				{
 					ArbitraryData = "My DATA",
 				};
+
+				matchName = Random.Range(1, 9999).ToString();
+				BoltLog.Warn(matchName);
 
 				BoltLog.Info("Starting Server");
 

@@ -36,6 +36,7 @@ namespace Bolt.Samples.Photon.Lobby
 		public Button readyButton;
 		public Button waitingPlayerButton;
 		public Button removePlayerButton;
+		public Text playerName_c;
 
 		public GameObject localIcone;
 		public GameObject remoteIcone;
@@ -124,6 +125,12 @@ namespace Bolt.Samples.Photon.Lobby
 		{
 			BoltLog.Info("SetupOtherPlayer");
 
+
+			if (BoltNetwork.IsClient)
+			{
+				playerName_c.text = "Player 2";
+			}
+
 			nameInput.interactable = false;
 
 			removePlayerButton.gameObject.SetActive(BoltNetwork.IsServer);
@@ -140,6 +147,11 @@ namespace Bolt.Samples.Photon.Lobby
 		public void SetupPlayer()
 		{
 			BoltLog.Info("SetupPlayer");
+
+			if (BoltNetwork.IsServer)
+			{
+				playerName_c.text = "Player 1";
+			}
 
 			localPlayer = this;
 
