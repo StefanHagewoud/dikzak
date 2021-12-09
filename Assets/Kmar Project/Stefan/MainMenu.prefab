@@ -2703,8 +2703,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Bolt.Samples.MoveAndShoot.MoveAndShoot_Menu, Assembly-CSharp
+      - m_Target: {fileID: 3114145910043055667}
+        m_TargetAssemblyTypeName: Bolt.Samples.Photon.Lobby.LobbyUIRoom, Assembly-CSharp
         m_MethodName: SecondLevel
         m_Mode: 1
         m_Arguments:
@@ -3297,8 +3297,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Bolt.Samples.MoveAndShoot.MoveAndShoot_Menu, Assembly-CSharp
+      - m_Target: {fileID: 3114145910043055667}
+        m_TargetAssemblyTypeName: Bolt.Samples.Photon.Lobby.LobbyUIRoom, Assembly-CSharp
         m_MethodName: ThirdLevel
         m_Mode: 1
         m_Arguments:
@@ -4105,8 +4105,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Bolt.Samples.MoveAndShoot.MoveAndShoot_Menu, Assembly-CSharp
+      - m_Target: {fileID: 3114145910043055667}
+        m_TargetAssemblyTypeName: Bolt.Samples.Photon.Lobby.LobbyUIRoom, Assembly-CSharp
         m_MethodName: TutorialLevel
         m_Mode: 1
         m_Arguments:
@@ -9051,7 +9051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7154622545076905133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9092,6 +9092,9 @@ MonoBehaviour:
   createRoomButton: {fileID: 7154622545627480766}
   browseServersButton: {fileID: 7154622544350728025}
   joinRandomButton: {fileID: 7154622545749536885}
+  joinRoomWithInput: {fileID: 5544237014122590537}
+  sessionText: 
+  roomInput: {fileID: 8912572909271004021}
   numberGenerator: 0
 --- !u!1 &7154622545084172384
 GameObject:
@@ -12209,12 +12212,15 @@ MonoBehaviour:
     sceneName: 
   minPlayers: 2
   prematchCountdown: 5
+  lobbyInstantiate: {fileID: 0}
+  sceneThatGettingLoaded: 
   uiTopPanel: {fileID: 0}
   uiMainMenu: {fileID: 6613866937795170685}
   uiRoom: {fileID: 3114145910043055667}
   uiServerList: {fileID: 0}
   uiInfoPanel: {fileID: 1388847698026357019}
   uiCountdownPanel: {fileID: 0}
+  startGame: {fileID: 2300828768976152653}
 --- !u!1 &7154622545975774992
 GameObject:
   m_ObjectHideFlags: 0
@@ -12232,7 +12238,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7154622545975774993
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13115,7 +13121,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &646782338539816038
 Transform:
   m_ObjectHideFlags: 0
@@ -14128,7 +14134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4955925889835169472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14168,6 +14174,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerListContentTransform: {fileID: 6415428595321649856}
   addButtonRow: {fileID: 6415428595321649856}
+  moeilijkheidsgraadButtons:
+  - {fileID: 5992351828849401453}
+  - {fileID: 3509703254383118623}
+  - {fileID: 6388387147594497255}
+  - {fileID: 6824569326624179410}
+  selectedLevel: 
+  onScreenSelectedLevelDisplay: {fileID: 5594240806592890856}
+  mainMenuScriptObjt: {fileID: 7154622545931584781}
 --- !u!1 &9209798765946850724
 GameObject:
   m_ObjectHideFlags: 0
@@ -14289,8 +14303,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Bolt.Samples.MoveAndShoot.MoveAndShoot_Menu, Assembly-CSharp
+      - m_Target: {fileID: 3114145910043055667}
+        m_TargetAssemblyTypeName: Bolt.Samples.Photon.Lobby.LobbyUIRoom, Assembly-CSharp
         m_MethodName: FirstLevel
         m_Mode: 1
         m_Arguments:

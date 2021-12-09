@@ -30,6 +30,7 @@ namespace Bolt.Samples.Photon.Lobby
 		private bool randomJoin = false;
 
 		[SerializeField] private GameObject lobbyInstantiate;
+		public string sceneThatGettingLoaded;
 
 		private void Awake()
 		{
@@ -54,22 +55,24 @@ namespace Bolt.Samples.Photon.Lobby
 
 		private void Start()
 		{
+			startGame.onClick.AddListener(StartButton);
 			StartUI();
-			StartGamePlay();
+			//StartGamePlay();
 		}
-
+		/*
 		private void StartGamePlay()
 		{
 			Debug.Log(string.Format("Lobby Scene: {0}", lobbyScene.SimpleSceneName));
 			Debug.Log(string.Format("Game Scene: {0}", gameScene.SimpleSceneName));
 		}
-
+		*/
 		// Game Loop
 
-		private void FixedUpdate()
+		public void StartButton()
 		{
 			if (BoltNetwork.IsServer && isCountdown == false)
 			{
+				startGame.onClick.RemoveAllListeners();
 				VerifyReady();
 			}
 		}
@@ -128,7 +131,7 @@ namespace Bolt.Samples.Photon.Lobby
 			countdown.Time = 0;
 			countdown.Send();
 
-			BoltNetwork.LoadScene(gameScene.SimpleSceneName);
+			BoltNetwork.LoadScene(sceneThatGettingLoaded);
 		}
 
 		// Bolt Callbacks

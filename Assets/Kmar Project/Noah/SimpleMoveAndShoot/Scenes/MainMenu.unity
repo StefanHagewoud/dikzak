@@ -1243,6 +1243,10 @@ PrefabInstance:
       propertyPath: lobbyScene.sceneAsset
       value: 
       objectReference: {fileID: 102900000, guid: 6b066de7032734a7c90042c275f688b2, type: 3}
+    - target: {fileID: 2114793533529116105, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2254625154390705272, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1274,6 +1278,10 @@ PrefabInstance:
     - target: {fileID: 4522595201811061588, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_Name
       value: RightButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4531113653214583069, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4722308492196151434, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_AnchorMax.y

@@ -15,6 +15,20 @@ namespace Bolt.Samples.Photon.Lobby
 
         private List<LobbyPlayer> _players = new List<LobbyPlayer>();
 
+        [SerializeField] private Button[] moeilijkheidsgraadButtons;
+        public string selectedLevel;
+        public Text onScreenSelectedLevelDisplay;
+
+        public GameObject mainMenuScriptObjt;
+        
+
+        public void Awake()
+        {
+            selectedLevel = "Makkelijk";
+            onScreenSelectedLevelDisplay.text = string.Format("Moeilijkheidsgraad: Makkelijk");
+            mainMenuScriptObjt.GetComponent<LobbyManager2>().sceneThatGettingLoaded = selectedLevel;
+        }
+
         public IEnumerable<LobbyPlayer> AllPlayers
         {
             get { return _players; }
@@ -93,6 +107,32 @@ namespace Bolt.Samples.Photon.Lobby
         public void ToggleVisibility(bool visible)
         {
             gameObject.SetActive(visible);
+        }
+
+        public void FirstLevel()
+        {
+            selectedLevel = ("Makkelijk");
+            onScreenSelectedLevelDisplay.text = string.Format("Moeilijkheidsgraad: Makkelijk");
+            mainMenuScriptObjt.GetComponent<LobbyManager2>().sceneThatGettingLoaded = selectedLevel;
+
+        }
+        public void SecondLevel()
+        {
+            selectedLevel = ("Gemiddeld");
+            onScreenSelectedLevelDisplay.text = string.Format("Moeilijkheidsgraad: Gemiddeld");
+            mainMenuScriptObjt.GetComponent<LobbyManager2>().sceneThatGettingLoaded = selectedLevel;
+        }
+        public void ThirdLevel()
+        {
+            selectedLevel = ("Moeilijk");
+            onScreenSelectedLevelDisplay.text = string.Format("Moeilijkheidsgraad: Moeilijk");
+            mainMenuScriptObjt.GetComponent<LobbyManager2>().sceneThatGettingLoaded = selectedLevel;
+        }
+        public void TutorialLevel()
+        {
+            selectedLevel = ("Tutorial");
+            onScreenSelectedLevelDisplay.text = string.Format("Moeilijkheidsgraad: Tutorial");
+            mainMenuScriptObjt.GetComponent<LobbyManager2>().sceneThatGettingLoaded = selectedLevel;
         }
     }
 }
