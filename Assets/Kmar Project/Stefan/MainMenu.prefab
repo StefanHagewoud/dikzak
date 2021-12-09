@@ -12212,6 +12212,7 @@ MonoBehaviour:
     sceneName: 
   minPlayers: 2
   prematchCountdown: 5
+  matchName: 
   lobbyInstantiate: {fileID: 0}
   sceneThatGettingLoaded: 
   uiTopPanel: {fileID: 0}
@@ -14173,12 +14174,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerListContentTransform: {fileID: 6415428595321649856}
-  addButtonRow: {fileID: 6415428595321649856}
   moeilijkheidsgraadButtons:
   - {fileID: 5992351828849401453}
   - {fileID: 3509703254383118623}
   - {fileID: 6388387147594497255}
   - {fileID: 6824569326624179410}
+  roomCodeOnScreenDisplay: {fileID: 5023494931058067084}
   selectedLevel: 
   onScreenSelectedLevelDisplay: {fileID: 5594240806592890856}
   mainMenuScriptObjt: {fileID: 7154622545931584781}

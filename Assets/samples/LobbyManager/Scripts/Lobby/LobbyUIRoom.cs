@@ -4,6 +4,8 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Bolt;
+using Photon.Bolt.Matchmaking;
+using Photon.Bolt.Utils;
 
 namespace Bolt.Samples.Photon.Lobby
 {
@@ -11,11 +13,11 @@ namespace Bolt.Samples.Photon.Lobby
     public class LobbyUIRoom : MonoBehaviour, ILobbyUI
     {
         [SerializeField] private RectTransform playerListContentTransform;
-        [SerializeField] private Transform addButtonRow;
 
         private List<LobbyPlayer> _players = new List<LobbyPlayer>();
 
         [SerializeField] private Button[] moeilijkheidsgraadButtons;
+        [SerializeField] private Text roomCodeOnScreenDisplay;
         public string selectedLevel;
         public Text onScreenSelectedLevelDisplay;
 
@@ -27,6 +29,7 @@ namespace Bolt.Samples.Photon.Lobby
             selectedLevel = "Makkelijk";
             onScreenSelectedLevelDisplay.text = string.Format("Moeilijkheidsgraad: Makkelijk");
             mainMenuScriptObjt.GetComponent<LobbyManager2>().sceneThatGettingLoaded = selectedLevel;
+            roomCodeOnScreenDisplay.text =string.Format("Room Code : " + mainMenuScriptObjt.GetComponent<LobbyManager2>().matchName);
         }
 
         public IEnumerable<LobbyPlayer> AllPlayers
@@ -78,7 +81,6 @@ namespace Bolt.Samples.Photon.Lobby
             _players.Add(player);
             player.transform.SetParent(playerListContentTransform, false);
             
-            addButtonRow.transform.SetAsLastSibling();
             PlayerListModified();
         }
 
