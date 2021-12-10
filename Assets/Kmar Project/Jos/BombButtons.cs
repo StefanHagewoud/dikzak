@@ -52,7 +52,11 @@ public class BombButtons : MonoBehaviour
     }
     public void EnterButton()
     {
-        Debug.Log("EnterCode");
+        if (textBox.GetComponent<Text>().text == "" + gameObject.GetComponent<CodeGenerator>().number)
+        {
+            Debug.Log("goede code ingevuld!");
+        }
+        //Debug.Log("EnterCode");
     }
     
 
