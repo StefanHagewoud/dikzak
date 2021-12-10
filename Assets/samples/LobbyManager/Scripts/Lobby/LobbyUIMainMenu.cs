@@ -6,6 +6,7 @@ namespace Bolt.Samples.Photon.Lobby
 {
     public class LobbyUIMainMenu : MonoBehaviour, ILobbyUI
     {
+        public event Action JoinRoomWithInputOnClick;
         public event Action OnCreateButtonClick;
         public event Action OnBrowseServerClick;
         public event Action OnJoinRandomClick;
@@ -26,6 +27,9 @@ namespace Bolt.Samples.Photon.Lobby
         [SerializeField] private InputField roomInput;
         [SerializeField] private int numberGenerator;
 
+        [Header("Code to Main Menu")]
+        public GameObject objWithMainMenuScript;
+
 
         void Start()
         {
@@ -40,12 +44,17 @@ namespace Bolt.Samples.Photon.Lobby
         {
             Debug.Log("Value Changed");
             sessionText = roomInput.text;
+
+            objWithMainMenuScript.GetComponent<LobbyManager2>().mainMenuString = sessionText;
         }
         public void OnEnable()
         {
-            //NumberGenerator for Room
-            numberGenerator = UnityEngine.Random.Range(1000, 99999);
-            matchName = numberGenerator.ToString();
+
+            joinRoomWithInput.onClick.RemoveAllListeners();
+            joinRoomWithInput.onClick.AddListener(() =>
+            {
+                if (JoinRoomWithInputOnClick != null) JoinRoomWithInputOnClick() ;
+            });
 
             createRoomButton.onClick.RemoveAllListeners();
             createRoomButton.onClick.AddListener(() =>

@@ -9051,7 +9051,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7154622545076905133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9096,6 +9096,7 @@ MonoBehaviour:
   sessionText: 
   roomInput: {fileID: 8912572909271004021}
   numberGenerator: 0
+  objWithMainMenuScript: {fileID: 7154622545931584781}
 --- !u!1 &7154622545084172384
 GameObject:
   m_ObjectHideFlags: 0
@@ -12213,6 +12214,7 @@ MonoBehaviour:
   minPlayers: 2
   prematchCountdown: 5
   matchName: 
+  mainMenuString: 
   sceneThatGettingLoaded: 
   uiTopPanel: {fileID: 0}
   uiMainMenu: {fileID: 6613866937795170685}
@@ -14134,7 +14136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4955925889835169472
 RectTransform:
   m_ObjectHideFlags: 0

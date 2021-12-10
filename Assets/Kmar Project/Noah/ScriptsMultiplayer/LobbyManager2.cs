@@ -29,6 +29,8 @@ namespace Bolt.Samples.Photon.Lobby
 		public string matchName;
 		private bool randomJoin = false;
 
+		public string mainMenuString;
+
 		public string sceneThatGettingLoaded;
 
 		private void Awake()
@@ -155,6 +157,14 @@ namespace Bolt.Samples.Photon.Lobby
 				BoltMatchmaking.JoinSession(session);
 			}
 		}
+
+		private void JoinEventHandlerCode()
+        {
+            if (BoltNetwork.IsClient)
+            {
+				BoltMatchmaking.JoinSession(mainMenuString);
+            }
+        }
 
 		private void ShutdownEventHandler()
 		{

@@ -43,6 +43,7 @@ namespace Bolt.Samples.Photon.Lobby
             ResetUI();
 
             // Setup Main Menu
+            uiMainMenu.JoinRoomWithInputOnClick += StartJoinRoom;
             uiMainMenu.OnCreateButtonClick += StartServerEvent;
             uiMainMenu.OnBrowseServerClick += StartClientEvent;
             uiMainMenu.OnJoinRandomClick += StartClientRandomEvent;
@@ -67,6 +68,11 @@ namespace Bolt.Samples.Photon.Lobby
             ChangeBodyTo(uiMainMenu);
         }
 
+        private void StartJoinRoom()
+        {
+            uiInfoPanel.Display("Joining Room With Code...");
+            JoinEventHandlerCode();
+        }
         private void StartServerEvent()
         {
             uiInfoPanel.Display("Creating Room...");
