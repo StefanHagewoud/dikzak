@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class BombTimer : MonoBehaviour
 {
-    public float timeValue = 90;
+    public float timeValue = 120;
     public Text timerText;
+    public GameObject bomb;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -19,6 +20,7 @@ public class BombTimer : MonoBehaviour
         else
         {
             timeValue = 0;
+            Destroy(bomb);
         }
         DisplayTime(timeValue);
     }

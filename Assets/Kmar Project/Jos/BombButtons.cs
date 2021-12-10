@@ -52,9 +52,15 @@ public class BombButtons : MonoBehaviour
     }
     public void EnterButton()
     {
+        if (textBox.GetComponent<Text>().text != "" + gameObject.GetComponent<CodeGenerator>().number)
+        {
+          Debug.Log("Verkeerde Code!");
+          textBox.GetComponent<Text>().text = "";
+        }
         if (textBox.GetComponent<Text>().text == "" + gameObject.GetComponent<CodeGenerator>().number)
         {
             Debug.Log("goede code ingevuld!");
+            gameObject.GetComponent<BombTimer>().enabled = false;
         }
         //Debug.Log("EnterCode");
     }
