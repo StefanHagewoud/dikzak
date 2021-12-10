@@ -51,6 +51,15 @@ namespace Bolt.Samples.Photon.Lobby
 
 		public static LobbyPlayer localPlayer;
 
+		 [Header("Arrow Buttons")]
+		public GameObject leftArrowButton;
+		public GameObject rightArrowButton;
+
+		[Header("Player Avatars")]
+		ExitGames.Client.Photon.Hashtable playerProperties = new ExitGames.Client.Photon.Hashtable();
+		public Image playerAvatar;
+		public Sprite[] avatars;
+
 		public override void Attached()
 		{
 			state.AddCallback("Name", () => nameInput.text = state.Name);
@@ -128,7 +137,7 @@ namespace Bolt.Samples.Photon.Lobby
 
 			if (BoltNetwork.IsClient)
 			{
-				playerName_c.text = "Player 2";
+				playerName_c.text = "You";
 			}
 
 			nameInput.interactable = false;
@@ -150,7 +159,7 @@ namespace Bolt.Samples.Photon.Lobby
 
 			if (BoltNetwork.IsServer)
 			{
-				playerName_c.text = "Player 1";
+				playerName_c.text = "You";
 			}
 
 			localPlayer = this;
@@ -268,6 +277,30 @@ namespace Bolt.Samples.Photon.Lobby
 				readyButton.interactable = entity.IsControlled;
 				colorButton.interactable = entity.IsControlled;
 				nameInput.interactable = entity.IsControlled;
+			}
+		}
+
+		public void OnClickLeftArrow()
+        {
+			if((int)playerProperties["playerAvatar"] == 0)
+            {
+				playerProperties["playerAvatar"] = avatars.Length - 1;
+			} else
+            {
+				playerProperties["playerAvatar"] = (int)playerProperties["playerAvatar"] - 1;
+			}
+			
+        }
+
+		public void OnClickRightArrow()
+        {
+			if ((int)playerProperties["playerAvatar"] == 0 - 1)
+			{
+				playerProperties["playerAvatar"] = 0;
+			}
+			else
+			{
+				playerProperties["playerAvatar"] = (int)playerProperties["playerAvatar"] + 1;
 			}
 		}
 	}

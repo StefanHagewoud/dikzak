@@ -1153,6 +1153,10 @@ MonoBehaviour:
   remoteIcone: {fileID: 1099339242320142}
   OddRowColor: {r: 0.98039216, g: 0.98039216, b: 0.98039216, a: 1}
   EvenRowColor: {r: 0.7058824, g: 0.7058824, b: 0.7058824, a: 1}
+  leftArrowButton: {fileID: 0}
+  rightArrowButton: {fileID: 0}
+  playerAvatar: {fileID: 0}
+  avatars: []
 --- !u!114 &114583046930903054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1671,6 +1675,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 224234337216122570}
     m_Modifications:
+    - target: {fileID: 547021145970009952, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_Text
+      value: Other Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656740692721574693, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656740692721574693, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656740692721574693, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114697275237362256}
+    - target: {fileID: 2656740692721574693, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656740692721574693, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickRightArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656740692721574693, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Bolt.Samples.Photon.Lobby.LobbyPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2656740692721574693, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394390256841390653, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394390256841390653, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394390256841390653, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 114697275237362256}
+    - target: {fileID: 4394390256841390653, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394390256841390653, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickLeftArrow
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394390256841390653, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Bolt.Samples.Photon.Lobby.LobbyPlayer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4394390256841390653, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6541639938420243429, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
       propertyPath: m_Name
       value: CharacterSelector
