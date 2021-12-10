@@ -118,7 +118,7 @@ namespace Bolt.Samples.Photon.Lobby
             object region;
             BoltMatchmaking.CurrentMetadata.TryGetValue("region", out region);
 
-            uiTopPanel.SetHeaderInfo("Client", BoltMatchmaking.CurrentSession.HostName, ((string)region).ToUpper());
+            //uiTopPanel.SetHeaderInfo("Client", BoltMatchmaking.CurrentSession.HostName, ((string)region).ToUpper());
 
             ChangeBodyTo(uiRoom);
         }
