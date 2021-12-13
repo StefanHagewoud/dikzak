@@ -288,7 +288,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh135302
+  m_Name: pb_Mesh55408
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6038,7 +6038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7314770909702993478, guid: 1fb80f0abd7b3b84fab2228e3addc315, type: 3}
       propertyPath: m_TagString
-      value: Hostage
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7314770909702993530, guid: 1fb80f0abd7b3b84fab2228e3addc315, type: 3}
       propertyPath: m_RootOrder
@@ -17021,6 +17021,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6104653621014684231, guid: ed64c4b7dc669b642bab5dc120cd342e, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed64c4b7dc669b642bab5dc120cd342e, type: 3}
 --- !u!4 &1001915476 stripped
@@ -20653,8 +20657,8 @@ GameObject:
   m_Name: Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!4 &1288533959
 Transform:
@@ -23664,6 +23668,10 @@ PrefabInstance:
       propertyPath: waypoints.Array.data[4]
       value: 
       objectReference: {fileID: 569597213}
+    - target: {fileID: 6366913079169971633, guid: 719cb0b3db736ad4f9886f819a85e484, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 719cb0b3db736ad4f9886f819a85e484, type: 3}
 --- !u!4 &1315744780 stripped
@@ -24399,7 +24407,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh135862
+  m_Name: pb_Mesh55994
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TrapScript : MonoBehaviour
 {
@@ -31,13 +32,14 @@ public class TrapScript : MonoBehaviour
         }
         if (hostage.GetComponent<HostageScript>().playerInRange == true)
         {
-            hostage.SetActive(false);
-            hostage2.SetActive(true);
+            hostage.GetComponent<NavMeshAgent>().speed = 10;
+            hostage2.GetComponent<NavMeshAgent>().speed = 0;
         }
         if (hostage2.GetComponent<HostageScript>().playerInRange == true)
         {
             hostage.SetActive(true);
-            hostage2.SetActive(false);
+            hostage.GetComponent<NavMeshAgent>().speed = 10;
+            hostage2.GetComponent<NavMeshAgent>().speed = 0;
         }
     }
 }
