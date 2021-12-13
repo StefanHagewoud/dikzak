@@ -428,7 +428,7 @@ MonoBehaviour:
   shootingPoint: {fileID: 1609597452}
   automaticGun: 1
   gunName: Assault Rifle
-  bullet: {fileID: 1419924662765674004, guid: 7e023fff767c33a488c0f9dbb9dfaa52, type: 3}
+  bullet: {fileID: 2025064229890612472, guid: fef0bc5e098dc1f47ae764fcd3fc1a94, type: 3}
   maxAmmo: 45
   curAmmo: 0
   maxClipAmmo: 0
@@ -1980,7 +1980,7 @@ MonoBehaviour:
   shootingPoint: {fileID: 1001351738}
   automaticGun: 0
   gunName: Pistol
-  bullet: {fileID: 1419924662765674004, guid: 7e023fff767c33a488c0f9dbb9dfaa52, type: 3}
+  bullet: {fileID: 2025064229890612472, guid: fef0bc5e098dc1f47ae764fcd3fc1a94, type: 3}
   maxAmmo: 30
   curAmmo: 0
   maxClipAmmo: 0
