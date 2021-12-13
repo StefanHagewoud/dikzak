@@ -18,28 +18,33 @@ public class KabelsScript : MonoBehaviour
 
    public void RedWire()
    {
-
-   }
+        Destroy(gameObject);
+        Debug.Log("Goede draad!");
+    }
    public void GreenWire()
    {
         Destroy(gameObject);
         Debug.Log("verkeerde draad!");
-        GameObject.Find("Timer").GetComponent<BombTimer>().timeValue =-5;
-   }
+        GameObject.Find("Timer").GetComponent<BombTimer>().timeValue -= 30;
+    }
    public void YellowWire()
    {
         Destroy(gameObject);
         Debug.Log("verkeerde draad!");
-   }
+        GameObject.Find("Timer").GetComponent<BombTimer>().timeValue -= 30;
+    }
    public void PurpleWire()
    {
         Destroy(gameObject);
         Debug.Log("verkeerde draad!");
+        GameObject.Find("Timer").GetComponent<BombTimer>().timeValue -= 30;
     }
    public void BlueWire()
    {
-
-   }
+        Destroy(gameObject);
+        Debug.Log("Goede draad!");
+        GameObject.Find("Enter").GetComponent<BombButtons>().enabled = true;
+    }
 
 
 
