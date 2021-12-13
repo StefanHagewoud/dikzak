@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 6104653621014684230}
   m_Layer: 0
   m_Name: StandingEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -231,7 +231,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &6104653621014684230
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   enemy: {fileID: 6104653621014684229}
   health: 100
   turnSpeed: 0.2
-  bullet: {fileID: 8075613705932381096, guid: b198df0b5788b834c9901d21eecd79a2, type: 3}
+  bullet: {fileID: 2025064229890612472, guid: fef0bc5e098dc1f47ae764fcd3fc1a94, type: 3}
   shootPoint: {fileID: 6104653619996485344}
   shootSpeed: 10
   timeToShoot: 1.5

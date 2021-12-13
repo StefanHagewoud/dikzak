@@ -25,12 +25,4 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            Debug.Log("HitPlayer!");
-            other.transform.GetComponent<PlayerScript>().TakeDamage(damage = 50); 
-        }
-    }
 }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Gun
+  - Enemy
+  - Karel
+  - Hostage
   layers:
   - Default
   - TransparentFX
