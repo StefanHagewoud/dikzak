@@ -13,6 +13,7 @@ public class GunScript : MonoBehaviour
     public GameObject shootingPoint;
     public bool automaticGun;
     public string gunName;
+    public ParticleSystem muzzleFlash;
 
     [Header("Ammo Settings")]
     public GameObject bullet;
@@ -33,6 +34,7 @@ public class GunScript : MonoBehaviour
     [Header("Sound Settings")]
     public AudioSource shootingSound;
     public AudioSource reloadSound;
+    public AudioSource dryFire;
 
     // Start is called before the first frame update
     void Start()
@@ -65,6 +67,10 @@ public class GunScript : MonoBehaviour
                         Shoot();
                     }
                 }
+                else
+                {
+                    dryFire.Play();
+                }
             }
         }
         else
@@ -74,6 +80,10 @@ public class GunScript : MonoBehaviour
                 if (curAmmo >= 1)
                 {
                     Shoot();
+                }
+                else
+                {
+                    dryFire.Play();
                 }
             }
         }
@@ -96,6 +106,7 @@ public class GunScript : MonoBehaviour
     {
         shootingSound.Play();
         Debug.Log("Shot!");
+        muzzleFlash.Play();
         curAmmo-- ;
         GameObject createdBullet = Instantiate(bullet, shootingPoint.transform.position, shootingPoint.transform.rotation);
         createdBullet.GetComponent<Rigidbody>().velocity = shootingPoint.transform.forward * blastPower;
