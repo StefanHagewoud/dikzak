@@ -26,6 +26,8 @@ public class Key : MonoBehaviour
 
         keyText = GetComponentInChildren<Text>();
 
+        keyNumber = Random.Range(0, 999).ToString();
+        keyText.text = keyNumber;
 
         //Get Random Color out of this list
         colors[0] = new Color32(0, 88, 168, 255); //Blue
@@ -34,7 +36,9 @@ public class Key : MonoBehaviour
         colors[3] = new Color32(168, 141, 0, 255); //Yellow
 
         //Gives Object Random Color an Number
-        RandomSettings();
+        Debug.Log("Gettin random color");
+        randomColor = Random.Range(0, colors.Length);
+        this.gameObject.GetComponent<Image>().color = colors[randomColor];
 
         //Set Color into String
         ColorToString();
@@ -42,18 +46,6 @@ public class Key : MonoBehaviour
     }
     public void Update()
     {
-           
-    }
-
-    public void RandomSettings()
-    {
-        keyNumber = Random.Range(0, 999).ToString();
-        keyText.text = keyNumber;
-
-        Debug.Log("Gettin random color");
-        randomColor = Random.Range(0, colors.Length);
-        this.gameObject.GetComponent<Image>().color = colors[randomColor];
-
         if (isFilled == false)
         {
             Debug.Log("gello");
@@ -61,8 +53,7 @@ public class Key : MonoBehaviour
             isFilled = true;
         }
     }
-
-    public void ColorToString()
+     public void ColorToString()
     {
         if (randomColor == 0)
         {
@@ -79,41 +70,6 @@ public class Key : MonoBehaviour
         if (randomColor == 3)
         {
             selectedColor = "Yellow";
-        }
-    }
-    public void CheckCorKey()
-    {
-        if(currentImage.name == "CircleLock")
-        {
-
-        }
-        if (currentImage.name == "HearthLock")
-        {
-
-        }
-        if (currentImage.name == "SquareLock")
-        {
-
-        }
-        if (currentImage.name == "TriangleLock")
-        {
-
-        }
-        if (selectedColor == "Blue")
-        {
-
-        }
-        if (selectedColor == "Green")
-        {
-
-        }
-        if (selectedColor == "Pink")
-        {
-
-        }
-        if (selectedColor == "Yellow")
-        {
-
         }
     }
     public void CheckCorrectKey()

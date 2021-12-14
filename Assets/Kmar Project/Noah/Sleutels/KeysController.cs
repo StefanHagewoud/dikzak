@@ -18,7 +18,6 @@ public class KeysController : MonoBehaviour
     private int randomText;
 
     public int incorrectKeys;
-    private int checkHelper;
 
 
     // Start is called before the first frame update
@@ -33,26 +32,24 @@ public class KeysController : MonoBehaviour
         randomText = Random.Range(0, lockTextSym.Length);
         lockText.GetComponent<Text>().text = lockTextSym[randomText];
 
-        for(int i = 0; 1<= keys.Count; i++)
+        for (int i = 0; 1 <= keys.Count; i++)
         {
             keys[i].GetComponent<Key>().currentImage = currentLockSprite;
             keys[i].GetComponent<Key>().currentSymbol = lockText.text;
-            if(i == keys.Count)
-            {
-                KeyManagerHelper();
-            }
+            
         }
+
+        //KeyManagerHelper();
     }
+
     // Sprite 0 = Circle
     // Sprite 1  = Hearth
     // Sprite 2 = Square
     // Sprite 3 = Triangle
 
-    // Update is called once per frame
-
     public void KeyManagerHelper()
     {
-        incorrectKeys = 0;
+        //incorrectKeys = 0;
         for (int i = 0; i < keys.Count; i++)
         {
             if (keys[i].GetComponent<Key>().correctKey == false)
@@ -61,29 +58,37 @@ public class KeysController : MonoBehaviour
                 Debug.Log("Incorrect Keys Plus One");
             }
         }
+        
     }
     void Update()
     {
-        if (incorrectKeys >= 8)
+        if(incorrectKeys <= 7)
         {
-            if(incorrectKeys <= 7)
+            for (int i = 0; i < keys.Count; i++)
             {
-                return;
-            }
-            else
-            {
-                for (checkHelper = 0; checkHelper < keys.Count; checkHelper++)
+                if (keys[i].GetComponent<Key>().correctKey == false)
                 {
-                    keys[checkHelper].GetComponent<Key>().RandomSettings();
-                    KeyManagerHelper();
+                    incorrectKeys++;
+                    Debug.Log("Incorrect Keys Plus One");
                 }
             }
         }
         else
         {
-            incorrectKeys = 0;
-            return;
-        }
+            if(incorrectKeys >= 9)
+            {
+                incorrectKeys = 0;
+            }
+            else
+            {
+                foreach (GameObject key in keys)
+                {
+                    key.GetComponent<Key>().isFilled = false;
+                    key.GetComponent<Key>().Start();
 
+                }
+                KeyManagerHelper();
+            }
+        }
     }
 }
