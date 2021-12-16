@@ -111,6 +111,14 @@ namespace Bolt.Samples.Photon.Lobby
             gameObject.SetActive(visible);
         }
 
+        public void TestLevel()
+        {
+            selectedLevel = ("Test");
+            onScreenSelectedLevelDisplay.text = string.Format("Moeilijkheidsgraad: Test");
+            mainMenuScriptObjt.GetComponent<LobbyManager2>().sceneThatGettingLoaded = selectedLevel;
+
+        }
+
         public void FirstLevel()
         {
             selectedLevel = ("Makkelijk");
@@ -118,6 +126,7 @@ namespace Bolt.Samples.Photon.Lobby
             mainMenuScriptObjt.GetComponent<LobbyManager2>().sceneThatGettingLoaded = selectedLevel;
 
         }
+
         public void SecondLevel()
         {
             selectedLevel = ("Gemiddeld");

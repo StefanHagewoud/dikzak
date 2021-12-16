@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 
 namespace Bolt.Samples.MoveAndShoot
 {
-	[BoltGlobalBehaviour(BoltNetworkModes.Server, "Makkelijk")]
+	[BoltGlobalBehaviour(BoltNetworkModes.Server, "Makkelijk", "Normaal", "Moeilijk", "Test", "Tutorial")]
 	public class MakkelijkNetworkCalllBacks : GlobalEventListener
 	{
 		public override void SceneLoadLocalDone(string scene, IProtocolToken token)
