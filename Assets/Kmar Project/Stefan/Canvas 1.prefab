@@ -233,6 +233,7 @@ MonoBehaviour:
   keyText: {fileID: 0}
   correctKey: 0
   isFilled: 0
+  randomColor: 0
   selectedColor: 
   currentImage: {fileID: 0}
   currentSymbol: 
@@ -1117,6 +1118,7 @@ MonoBehaviour:
   keyText: {fileID: 0}
   correctKey: 0
   isFilled: 0
+  randomColor: 0
   selectedColor: 
   currentImage: {fileID: 0}
   currentSymbol: 
@@ -1554,6 +1556,7 @@ MonoBehaviour:
   keyText: {fileID: 0}
   correctKey: 0
   isFilled: 0
+  randomColor: 0
   selectedColor: 
   currentImage: {fileID: 0}
   currentSymbol: 
@@ -2073,6 +2076,7 @@ MonoBehaviour:
   keyText: {fileID: 0}
   correctKey: 0
   isFilled: 0
+  randomColor: 0
   selectedColor: 
   currentImage: {fileID: 0}
   currentSymbol: 
@@ -2392,6 +2396,7 @@ MonoBehaviour:
   keyText: {fileID: 0}
   correctKey: 0
   isFilled: 0
+  randomColor: 0
   selectedColor: 
   currentImage: {fileID: 0}
   currentSymbol: 
@@ -3391,6 +3396,7 @@ MonoBehaviour:
   keyText: {fileID: 0}
   correctKey: 0
   isFilled: 0
+  randomColor: 0
   selectedColor: 
   currentImage: {fileID: 0}
   currentSymbol: 
@@ -4304,6 +4310,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3766184789962152462}
   - component: {fileID: 3428772848972223600}
+  - component: {fileID: 8572087388140902086}
   m_Layer: 5
   m_Name: EmptyKeys
   m_TagString: Untagged
@@ -4347,7 +4354,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3766184789962152463}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d22eeeb70f0dcf04d958eee7d95ee2a6, type: 3}
   m_Name: 
@@ -4367,6 +4374,33 @@ MonoBehaviour:
   - $
   - '%'
   incorrectKeys: 0
+--- !u!114 &8572087388140902086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3766184789962152463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4d7c0b443c25994c9b80c5c13632def, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys: []
+  lockImg: {fileID: 4317837115480629941}
+  currentLockSprite: {fileID: 0}
+  lockSprites:
+  - {fileID: 21300000, guid: c4f428d45618e38469d376957c48bfaa, type: 3}
+  - {fileID: 21300000, guid: eb41db4d67469774b8508020ee9c7bad, type: 3}
+  - {fileID: 21300000, guid: 6fdca01b4ddc9f54db15d8d100730656, type: 3}
+  - {fileID: 21300000, guid: 0a711b6703d65fb418636b8bcd1b5218, type: 3}
+  lockText: {fileID: 5388311236191782720}
+  lockTextSym:
+  - '@'
+  - '#'
+  - $
+  - '%'
+  selectedColor: 
 --- !u!1 &3766184789977310635
 GameObject:
   m_ObjectHideFlags: 0
@@ -6156,6 +6190,7 @@ MonoBehaviour:
   keyText: {fileID: 0}
   correctKey: 0
   isFilled: 0
+  randomColor: 0
   selectedColor: 
   currentImage: {fileID: 0}
   currentSymbol: 
@@ -6837,6 +6872,7 @@ MonoBehaviour:
   keyText: {fileID: 0}
   correctKey: 0
   isFilled: 0
+  randomColor: 0
   selectedColor: 
   currentImage: {fileID: 0}
   currentSymbol: 
