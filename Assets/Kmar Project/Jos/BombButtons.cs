@@ -50,6 +50,7 @@ public class BombButtons : MonoBehaviour
     {
         textBox.GetComponent<Text>().text = "";
     }
+   
     public void EnterButton()
     {
         if (textBox.GetComponent<Text>().text != "" + gameObject.GetComponent<CodeGenerator>().number)
