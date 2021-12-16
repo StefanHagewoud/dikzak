@@ -11,6 +11,7 @@ public class CodeGenerator : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
+        Debug.Log("Rood, Blauw");
         number = Random.Range(1, 10000);
         //textBox.GetComponent<Text>().text = "" + number;
         Debug.Log(number);
