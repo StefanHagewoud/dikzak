@@ -4,19 +4,8 @@ using UnityEngine;
 
 public class KabelsScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
-   public void RedWire()
+    
+    public void RedWire()
    {
         Debug.Log("verkeerde draad!");
         Destroy(gameObject);
@@ -71,6 +60,5 @@ public class KabelsScript : MonoBehaviour
     {
         Debug.Log("Goede draad!");
         Destroy(gameObject);
-       
     }
 }

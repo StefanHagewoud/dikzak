@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class CodeGenerator : MonoBehaviour
 {
+    public GameObject geelgoededraad;
+    public GameObject rooddraadgoed;
+    public GameObject blauwdraadgoed;
+    public GameObject groendraadgoed;
+    public GameObject paarsdraadgoed;
+
     public int number;
     public Text textBox;
 
@@ -26,9 +32,35 @@ public class CodeGenerator : MonoBehaviour
         Debug.Log(randomName1);
         if (randomName == "Geel")
         {
+            geelgoededraad.SetActive(true);
             Destroy(GameObject.Find("Geeldraad"));
-            //GameObject.Find("GeelGoededraad").SetActive(true);
         }
+
+        if(randomName == "Rood")
+        {
+            rooddraadgoed.SetActive(true);
+            Destroy(GameObject.Find("Rooddraad"));
+        }
+
+        if(randomName1 == "Paars")
+        {
+            paarsdraadgoed.SetActive(true);
+            Destroy(GameObject.Find("Paarsdraad"));
+        }
+
+        if(randomName1 == "Groen")
+        {
+            groendraadgoed.SetActive(true);
+            Destroy(GameObject.Find("Groendraad"));
+        }
+
+        if(randomName1 == "Blauw")
+        {
+            blauwdraadgoed.SetActive(true);
+            Destroy(GameObject.Find("Blauwdraad"));
+        }
+
+
     }
     
 
