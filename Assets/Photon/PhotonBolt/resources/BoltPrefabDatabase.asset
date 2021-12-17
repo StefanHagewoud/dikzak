@@ -15,7 +15,6 @@ MonoBehaviour:
   DatabaseMode: 0
   Prefabs:
   - {fileID: 0}
-  - {fileID: 1876292062879048, guid: ee03d5d7dd331489b878c459b9b588e2, type: 3}
   - {fileID: 100000, guid: b5907a8b9fa4ef549b9dd4f8a9e863eb, type: 3}
   - {fileID: 100000, guid: 9e4c13062a8548e438c26a67020d9895, type: 3}
   - {fileID: 100000, guid: e6dd368eb36c92b429be2244b9da818a, type: 3}
@@ -31,4 +30,8 @@ MonoBehaviour:
   - {fileID: 1116248558619672, guid: 195ea7f418fb44dbf8fc74e1e1ccfb06, type: 3}
   - {fileID: 1093895774965776, guid: 5f4ce519e6b1b45acbf4f4a2d461943d, type: 3}
   - {fileID: 1093895774965776, guid: 22d1a7e17827244bba7e0af01b910db6, type: 3}
-  SearchPaths: []
+  - {fileID: 1277246129721795829, guid: 82345d3f94926eb479a0e7092492abb1, type: 3}
+  - {fileID: 1876292062879048, guid: ee03d5d7dd331489b878c459b9b588e2, type: 3}
+  SearchPaths:
+  - Assets/samples
+  - Assets/Kmar Project

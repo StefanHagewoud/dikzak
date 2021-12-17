@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Kmar Project/Test.unity
     guid: 43b352a8cdbec07479f6c3624d4e6a4d
+  - enabled: 1
+    path: Assets/Kmar Project/Noah/Makkelijk.unity
+    guid: 54bf75c523352e54dab93be330775c79
   m_configObjects: {}

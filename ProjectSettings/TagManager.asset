@@ -8,6 +8,9 @@ TagManager:
   - Enemy
   - Karel
   - Hostage
+  - Keys
+  - Buttons
+  - Breacher
   layers:
   - Default
   - TransparentFX

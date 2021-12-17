@@ -10,7 +10,7 @@ namespace Bolt.Samples.MoveAndShoot
 		public override void SceneLoadLocalDone(string scene, IProtocolToken token)
 		{
 			Debug.Log("Spawning");
-			var entity = BoltNetwork.Instantiate(BoltPrefabs.MoveAndShootPlayer, SpawnPointsManager.GetSpawnPosition(),
+			var entity = BoltNetwork.Instantiate(BoltPrefabs.BreacherPlayer, SpawnPointsManager.GetSpawnPosition(),
 				Quaternion.identity);
 
 			entity.TakeControl();

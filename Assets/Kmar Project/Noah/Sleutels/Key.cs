@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,9 @@ public class Key : MonoBehaviour
     public string currentSymbol;
 
     private int correctKeys;
+    private bool correctKey;
+
+    public GameObject puzzleActivator;
 
     // Start is called before the first frame update
     public void Awake()
@@ -25,7 +29,14 @@ public class Key : MonoBehaviour
         keyText = GetComponentInChildren<Text>();
 
     }
-     public void ColorToString()
+
+    public void Start()
+    {
+            //Checks if buttons is clicked
+            var button = transform.GetComponent<Button>();
+            button.onClick.AddListener(this.OnButtonClick);
+    }
+    public void ColorToString()
     {
         if (randomColor == 0)
         {
@@ -52,18 +63,22 @@ public class Key : MonoBehaviour
             if(currentSymbol == "@" && Enumerable.Range(1, 250).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "#" && Enumerable.Range(251, 500).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "$" && Enumerable.Range(501, 750).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "%" && Enumerable.Range(751, 1000).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
         }
         if (currentImage.name == "HearthLock" && selectedColor == "Green")
@@ -71,18 +86,22 @@ public class Key : MonoBehaviour
             if (currentSymbol == "@" && Enumerable.Range(1, 250).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "#" && Enumerable.Range(251, 500).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "$" && Enumerable.Range(501, 750).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "%" && Enumerable.Range(751, 1000).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
         }
         if (currentImage.name == "SquareLock" && selectedColor == "Pink")
@@ -90,18 +109,22 @@ public class Key : MonoBehaviour
             if (currentSymbol == "@" && Enumerable.Range(1, 250).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "#" && Enumerable.Range(251, 500).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "$" && Enumerable.Range(501, 750).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "%" && Enumerable.Range(751, 1000).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
         }
         if (currentImage.name == "TriangleLock" && selectedColor == "Yellow")
@@ -109,19 +132,31 @@ public class Key : MonoBehaviour
             if (currentSymbol == "@" && Enumerable.Range(1, 250).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "#" && Enumerable.Range(251, 500).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "$" && Enumerable.Range(501, 750).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
             if (currentSymbol == "%" && Enumerable.Range(751, 1000).Contains(int.Parse(keyNumber)))
             {
                 GetComponentInParent<KeySystem>().correctKeys++;
+                correctKey = true;
             }
+        }
+    }
+
+    public void OnButtonClick()
+    {
+        if(correctKey == true)
+        {
+            puzzleActivator.GetComponent<PuzzleActivator>().isSolved = true;
         }
     }
 }
