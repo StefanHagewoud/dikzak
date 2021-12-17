@@ -60,6 +60,8 @@ namespace Bolt.Samples.Photon.Lobby
 		public Image playerAvatar;
 		public Sprite[] avatars;
 
+		public Text roleText;
+
 		public override void Attached()
 		{
 			state.AddCallback("Name", () => nameInput.text = state.Name);
@@ -138,6 +140,7 @@ namespace Bolt.Samples.Photon.Lobby
 			if (BoltNetwork.IsClient)
 			{
 				playerName_c.text = "You";
+				roleText.text = "Commander";
 			}
 
 			nameInput.interactable = false;
@@ -160,6 +163,7 @@ namespace Bolt.Samples.Photon.Lobby
 			if (BoltNetwork.IsServer)
 			{
 				playerName_c.text = "You";
+				roleText.text = "Breacher";
 			}
 
 			localPlayer = this;

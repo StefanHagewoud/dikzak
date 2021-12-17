@@ -33,6 +33,7 @@ public class HostageScript : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            player = other.gameObject.transform;
             playerInRange = true;
         }
     }

@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Kmar Project/Noah/SimpleMoveAndShoot/Scenes/MainMenu.unity
+    guid: 6b066de7032734a7c90042c275f688b2
+  - enabled: 1
+    path: Assets/Scenes/Makkelijk.unity
+    guid: 54bf75c523352e54dab93be330775c79
+  - enabled: 1
     path: Assets/Kmar Project/Stefan/UX scenes/MainMenu.unity
     guid: 04e1d8aae147cdf48927dcc8a9ecae6f
   - enabled: 1
     path: Assets/Kmar Project/Test.unity
     guid: 43b352a8cdbec07479f6c3624d4e6a4d
-  - enabled: 1
-    path: Assets/Kmar Project/Noah/Makkelijk.unity
-    guid: 54bf75c523352e54dab93be330775c79
   m_configObjects: {}

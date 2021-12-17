@@ -25,7 +25,19 @@ namespace Bolt.Samples.MoveAndShoot
 			if (_instance != null && _instance.spawnPoints != null && _instance.spawnPoints.Length > 0)
 			{
 				var pos = Random.Range(0, _instance.spawnPoints.Length);
-				position = _instance.spawnPoints[pos].position;
+				position = _instance.spawnPoints[0].position;
+			}
+
+			return position;
+		}
+		public static Vector3 GetSpawnPosition2()
+		{
+			var position = Vector3.zero;
+
+			if (_instance != null && _instance.spawnPoints != null && _instance.spawnPoints.Length > 0)
+			{
+				var pos = Random.Range(0, _instance.spawnPoints.Length);
+				position = _instance.spawnPoints[1].position;
 			}
 
 			return position;

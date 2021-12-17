@@ -18,7 +18,7 @@ namespace Bolt.Samples.MoveAndShoot
 
 		public override void SceneLoadRemoteDone(BoltConnection connection, IProtocolToken token)
 		{
-			var entity = BoltNetwork.Instantiate(BoltPrefabs.MoveAndShootPlayer, SpawnPointsManager.GetSpawnPosition(),
+			var entity = BoltNetwork.Instantiate(BoltPrefabs.CommanderPlayer, SpawnPointsManager.GetSpawnPosition2(),
 				Quaternion.identity);
 
 			entity.AssignControl(connection);

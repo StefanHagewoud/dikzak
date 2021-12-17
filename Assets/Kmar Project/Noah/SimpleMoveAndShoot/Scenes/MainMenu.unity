@@ -1220,6 +1220,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 719164261023597387, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2066204534026553798, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1288,6 +1292,18 @@ PrefabInstance:
       propertyPath: addButtonRow
       value: 
       objectReference: {fileID: 7677225722346603140, guid: 0ac8931c95545f344b23d42d5ca1d39d, type: 3}
+    - target: {fileID: 3292521172040406634, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3509703254383118623, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254928071320442971, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4512011595873522769, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_RootOrder
       value: 10
@@ -1315,6 +1331,26 @@ PrefabInstance:
     - target: {fileID: 4722308492196151434, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544237014122590537, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544237014122590537, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544237014122590537, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544237014122590537, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 0.33962262
+      objectReference: {fileID: 0}
+    - target: {fileID: 5544237014122590537, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 0.33962262
       objectReference: {fileID: 0}
     - target: {fileID: 6101289240285415313, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_Transition
@@ -1364,9 +1400,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6388387147594497255, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6824569326624179410, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6843811292952099475, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6946630202249160173, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7146107663390286987, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1451,6 +1499,10 @@ PrefabInstance:
     - target: {fileID: 7154622544341240302, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -290
+      objectReference: {fileID: 0}
+    - target: {fileID: 7154622544350728031, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7154622544375853593, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_RootOrder
@@ -1905,6 +1957,10 @@ PrefabInstance:
     - target: {fileID: 8909541755288323017, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_Name
       value: LeftButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8912572909271004021, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
+      propertyPath: m_Interactable
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9182872812028521509, guid: 0bc1cefcdce64374baceadd0cf77a982, type: 3}
       propertyPath: m_IsActive
