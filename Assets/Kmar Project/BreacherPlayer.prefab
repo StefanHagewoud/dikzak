@@ -1755,7 +1755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: 100
   healthSlider: {fileID: 0}
-  movementSpeed: 10
+  movementSpeed: 7
   assaultRifle: {fileID: 2123686125503887291}
   pistol: {fileID: 2123686127417963215}
   equippedGun: {fileID: 2123686127417963215}

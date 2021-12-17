@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //Movement
         float v = Input.GetAxis("Vertical");
@@ -38,8 +38,11 @@ public class PlayerController : MonoBehaviour
         move.z = v;
 
         GetComponent<Transform>().Translate(move * Time.deltaTime * movementSpeed, Space.World);
+    }
+    private void Update()
+    {
 
-        if(this.gameObject.transform.position != lastPos)
+        if (this.gameObject.transform.position != lastPos)
         {
             animator.SetBool("isMoving", true);
         }

@@ -20,8 +20,11 @@ public class Finish : MonoBehaviour
     {
         if (hostage.GetComponent<HostageScript>().playerInRange == true)
         {
-            Application.Quit();
-            Debug.Log("finish");
+            if (other.tag == "Player")
+            {
+                Application.Quit();
+                Debug.Log("finish");
+            }
         }
     }
 }
