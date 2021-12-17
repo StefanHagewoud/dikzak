@@ -11,9 +11,12 @@ public class CodeGenerator : MonoBehaviour
     public GameObject groendraadgoed;
     public GameObject paarsdraadgoed;
 
+    public bool puzzel1;
+    public bool puzzel2;
+    public bool puzzel3;
+
     public int number;
     public Text textBox;
-
     // Start is called before the first frame update
     public void Start()
     {
@@ -60,8 +63,9 @@ public class CodeGenerator : MonoBehaviour
             Destroy(GameObject.Find("Blauwdraad"));
         }
 
-
+        if (GameObject.Find("Wires").GetComponent<KabelsScript>().puzzelcounter == 2)
+        {
+            puzzel1 = true;
+        }
     }
-    
-
 }

@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!1 &112966694 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3766184789483929337, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
@@ -162,6 +163,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!1 &228373562
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!114 &449192661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,6 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!114 &573558968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -657,6 +661,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!114 &661999819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,11 +1208,23 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1857518444}
     - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
@@ -1215,12 +1232,24 @@ PrefabInstance:
       value: Button8
       objectReference: {fileID: 0}
     - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BombButtons, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: BombButtons, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3766184790176581832, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3766184790307357113, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
       propertyPath: m_Name
@@ -1393,6 +1422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!1 &1074136093 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3766184789240094434, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
@@ -1425,6 +1455,9 @@ MonoBehaviour:
   blauwdraadgoed: {fileID: 573558965}
   groendraadgoed: {fileID: 661999816}
   paarsdraadgoed: {fileID: 2080243704}
+  puzzel1: 0
+  puzzel2: 0
+  puzzel3: 0
   number: 0
   textBox: {fileID: 1322832566}
 --- !u!114 &1117871673
@@ -1475,6 +1508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!1 &1322832566 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3766184789839592181, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
@@ -1799,6 +1833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!114 &1800094868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1910,6 +1945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!1 &1857518439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3766184790176581846, guid: f6622307028f8e040b5d40af48a5d79b, type: 3}
@@ -1997,6 +2033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
 --- !u!114 &2080243707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2108,3 +2145,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 338d899ec08366343b16500b1e9c8e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzelcounter: 0
