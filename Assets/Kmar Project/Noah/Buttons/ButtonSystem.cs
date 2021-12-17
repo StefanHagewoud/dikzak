@@ -8,9 +8,22 @@ public class ButtonSystem : MonoBehaviour
     [Header("Button Settings")]
     public List<GameObject> buttons;
 
+    public List<GameObject> trueAndFalse;
+
     [Header("Code Settings")]
     public int randomCodeGenerator;
     public string enteredCode;
+
+    void Swap()
+    {
+        for(int i = 0; i <= buttons.Count - 1; i++)
+        {
+            Vector3 temp = buttons[i].transform.position;
+            int randomNumber = Random.Range(0, 9);
+            buttons[i].transform.position = buttons[randomNumber].transform.position;
+            buttons[randomNumber].transform.position = temp;
+        }
+    }
 
     public void Awake()
     {
@@ -21,6 +34,9 @@ public class ButtonSystem : MonoBehaviour
     void Start()
     {
         randomCodeGenerator = Random.Range(9999, 99999);
+
+        //Swaps Random Buttons
+        Swap();
     }
 
     public void Submit()
@@ -28,6 +44,10 @@ public class ButtonSystem : MonoBehaviour
         if(enteredCode == randomCodeGenerator.ToString())
         {
             Debug.Log("Correct");
+        }
+        else
+        {
+            Debug.Log("Incorrect!");
         }
     }
 
