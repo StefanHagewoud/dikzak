@@ -11,19 +11,24 @@ public class CodeGenerator : MonoBehaviour
     public GameObject groendraadgoed;
     public GameObject paarsdraadgoed;
 
-    public bool puzzel1;
-    public bool puzzel2;
-    public bool puzzel3;
+    public int puzzelCounter;
+    public bool[] puzzels;
 
     public int number;
+    public int colorCode;
+    public int colorCode1;
+    public int colorCode2;
     public Text textBox;
-    // Start is called before the first frame update
+
     public void Start()
     {
-        //Debug.Log("Rood, Blauw");
         number = Random.Range(1, 10000);
-        //textBox.GetComponent<Text>().text = "" + number;
+        colorCode = Random.Range(1, 7);
+        colorCode1 = Random.Range(1, 7);
+        colorCode2 = Random.Range(1, 7);
+    //textBox.GetComponent<Text>().text = "" + number;
         Debug.Log(number);
+        Debug.Log(colorCode + colorCode1 + colorCode2);
 
         string[] kabels = new string[] { "Geel", "Rood", "Blauw", "Paars", "Groen" };
         string randomName = kabels[Random.Range(0, 2)];
@@ -62,10 +67,32 @@ public class CodeGenerator : MonoBehaviour
             blauwdraadgoed.SetActive(true);
             Destroy(GameObject.Find("Blauwdraad"));
         }
-
-        if (GameObject.Find("Wires").GetComponent<KabelsScript>().puzzelcounter == 2)
+    }
+    public void Update()
+    {
+        if (puzzelCounter == 2)
         {
-            puzzel1 = true;
+            for (int i = 0; i < puzzels.Length; i++)
+            {
+                if (puzzels[i] == false)
+                {
+                    puzzels[0] = true;
+                    break;
+                }
+            }
+        }
+
+        if (puzzelCounter == 3)
+        {
+            for (int i = 0; i < puzzels.Length; i++)
+            {
+                if (puzzels[i] == false)
+                {
+                    puzzels[1] = true;
+                    break;
+                }
+            }
         }
     }
+
 }

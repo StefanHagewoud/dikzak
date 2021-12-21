@@ -62,7 +62,9 @@ public class BombButtons : MonoBehaviour
         if (textBox.GetComponent<Text>().text == "" + gameObject.GetComponent<CodeGenerator>().number)
         {
             Debug.Log("goede code ingevuld!");
-            GameObject.Find("Timer").GetComponent<BombTimer>().enabled = false;
+            //GameObject.Find("Timer").GetComponent<BombTimer>().enabled = false;
+            GetComponent<CodeGenerator>().puzzelCounter++;
+            GetComponent<Button>().interactable = false;
         }
         //Debug.Log("EnterCode");
     }

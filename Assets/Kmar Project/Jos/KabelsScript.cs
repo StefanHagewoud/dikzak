@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KabelsScript : MonoBehaviour
 {
-    public int puzzelcounter;
 
     public void RedWire()
    { 
@@ -39,31 +38,31 @@ public class KabelsScript : MonoBehaviour
     /////////////////////////////////////////////////////////////////////
     public void RooddraadGoed()
     {
-        GetComponent<KabelsScript>().puzzelcounter++;
+        GameObject.Find("Enter").GetComponent<CodeGenerator>().puzzelCounter++;
         Debug.Log("Goede draad!");
         gameObject.SetActive(false);
     }
     public void GroendraadGoed()
     {
-        GetComponent<KabelsScript>().puzzelcounter++;
+        GameObject.Find("Enter").GetComponent<CodeGenerator>().puzzelCounter++;
         Debug.Log("Goede draad!");
         gameObject.SetActive(false);
     }
     public void GeeldraadGoed()
     {
-        GetComponent<KabelsScript>().puzzelcounter++;
+        GameObject.Find("Enter").GetComponent<CodeGenerator>().puzzelCounter++;
         Debug.Log("Goede draad!");
         gameObject.SetActive(false);
     }
     public void PaarsdraadGoed()
     {
-        GetComponent<KabelsScript>().puzzelcounter++;
+        GameObject.Find("Enter").GetComponent<CodeGenerator>().puzzelCounter++;
         Debug.Log("Goede draad!");
         gameObject.SetActive(false);
     }
     public void BlauwdraadGoed()
     {
-        GetComponent<KabelsScript>().puzzelcounter++;
+        GameObject.Find("Enter").GetComponent<CodeGenerator>().puzzelCounter++;
         Debug.Log("Goede draad!");
         gameObject.SetActive(false);
     }
