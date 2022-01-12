@@ -11,6 +11,9 @@ TagManager:
   - Keys
   - Buttons
   - Breacher
+  - New tag
+  - Computer1
+  - Computer2
   layers:
   - Default
   - TransparentFX
