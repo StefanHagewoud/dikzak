@@ -46,7 +46,7 @@ public class Kleurcodescript : MonoBehaviour
         if (textBOX.GetComponent<Text>().text != "" + gameObject.GetComponent<Puzzelbijhouder>().kleurCode)
         {
             textBOX.GetComponent<Text>().text = "";
-            GameObject.Find("Timer").GetComponent<BombTimer>().timeValue -= 5;
+            GameObject.Find("Timer").GetComponent<BombTimer>().timeValue -= 10;
         }
 
         if (textBOX.GetComponent<Text>().text == "" + gameObject.GetComponent<Puzzelbijhouder>().kleurCode)
