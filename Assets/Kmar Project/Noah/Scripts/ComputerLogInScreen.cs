@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class ComputerLogInScreen : MonoBehaviour
 {
 	public float delay = 0.1f;
+	public float textDelay;
 	[Header("First Text")]
 	public string firstText;
 	public Text firstSelectedText;
@@ -25,7 +26,7 @@ public class ComputerLogInScreen : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		StartCoroutine(ShowText());
+		StartCoroutine(WaitForSecondsShowText());
 	}
 
 	public void CheckIfDone()
@@ -63,5 +64,12 @@ public class ComputerLogInScreen : MonoBehaviour
 				CheckIfDone();
 			}
 		}
+	}
+
+	private IEnumerator WaitForSecondsShowText()
+    {
+		yield return new WaitForSeconds(textDelay);
+		StartCoroutine(ShowText());
+
 	}
 }

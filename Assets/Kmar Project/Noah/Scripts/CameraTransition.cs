@@ -29,7 +29,6 @@ public class CameraTransition : MonoBehaviour
     {
         if( currentView == startingView)
         {
-            Debug.Log("Yes");
             if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("no");

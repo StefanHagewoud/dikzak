@@ -14,6 +14,7 @@ TagManager:
   - New tag
   - Computer1
   - Computer2
+  - OnOffButton
   layers:
   - Default
   - TransparentFX

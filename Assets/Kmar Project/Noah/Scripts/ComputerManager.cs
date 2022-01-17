@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ComputerManager : MonoBehaviour
 {
-    public GameObject logInMenu;
-    public GameObject desktopMenu;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +15,6 @@ public class ComputerManager : MonoBehaviour
     void Update()
     {
         
-    }
 
-    public void logInButton()
-    {
-        logInMenu.SetActive(false);
-        desktopMenu.SetActive(true);
     }
 }
