@@ -1526,7 +1526,7 @@ PrefabInstance:
     - target: {fileID: 4271181055454655318, guid: 640534688a4e0044a8ad424e1fe8e0d9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 760701936}
+      objectReference: {fileID: 0}
     - target: {fileID: 4271181055454655318, guid: 640534688a4e0044a8ad424e1fe8e0d9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2840,8 +2840,8 @@ GameObject:
   - component: {fileID: 760701934}
   - component: {fileID: 760701933}
   - component: {fileID: 760701932}
-  - component: {fileID: 760701936}
   - component: {fileID: 760701935}
+  - component: {fileID: 760701936}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2956,16 +2956,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 760701931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c4768f390353fe4eba59225f3e4f207, type: 3}
+  m_Script: {fileID: 11500000, guid: 981e159122bd68f4484be1ba183a67ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  views:
-  - {fileID: 1232512049}
-  - {fileID: 879180633}
-  - {fileID: 1464810299}
-  - {fileID: 370155671}
-  - {fileID: 328863687}
-  transitionSpeed: 5
+  views: []
+  transitionSpeed: 2
   startingView: {fileID: 393986604}
   firstComputer: {fileID: 771481168}
   secondComputer: {fileID: 381348640}
