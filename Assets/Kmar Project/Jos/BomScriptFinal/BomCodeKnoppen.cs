@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BombButtons : MonoBehaviour
+public class BomCodeKnoppen : MonoBehaviour
 {
     public GameObject textBox;
     public void Button1()
     {
-        textBox.GetComponent<Text>().text+= 1;
+        textBox.GetComponent<Text>().text += 1;
     }
     public void Button2()
     {
@@ -44,26 +44,26 @@ public class BombButtons : MonoBehaviour
     }
     public void Button0()
     {
-        textBox.GetComponent<Text>().text += 0; 
+        textBox.GetComponent<Text>().text += 0;
     }
     public void TerugButton()
     {
         textBox.GetComponent<Text>().text = "";
     }
-   
+
     public void EnterButton()
     {
-        if (textBox.GetComponent<Text>().text != "" + gameObject.GetComponent<CodeGenerator>().number)
+        if (textBox.GetComponent<Text>().text != "" + gameObject.GetComponent<Puzzelbijhouder>().number)
         {
-          Debug.Log("Verkeerde Code!");
-          textBox.GetComponent<Text>().text = "";
-          GameObject.Find("Timer").GetComponent<BombTimer>().timeValue -= 30;
+            Debug.Log("Verkeerde Code!");
+            textBox.GetComponent<Text>().text = "";
+            GameObject.Find("Timer").GetComponent<BombTimer>().timeValue -= 30;
         }
-        if (textBox.GetComponent<Text>().text == "" + gameObject.GetComponent<CodeGenerator>().number)
+        if (textBox.GetComponent<Text>().text == "" + gameObject.GetComponent<Puzzelbijhouder>().number)
         {
             Debug.Log("goede code ingevuld!");
             //GameObject.Find("Timer").GetComponent<BombTimer>().enabled = false;
-            GetComponent<CodeGenerator>().puzzelCounter++;
+            GetComponent<Puzzelbijhouder>().puzzelCounter++;
             textBox.GetComponent<Text>().text = "";
             GameObject.Find("1").GetComponent<Button>().interactable = false;
             GameObject.Find("2").GetComponent<Button>().interactable = false;
