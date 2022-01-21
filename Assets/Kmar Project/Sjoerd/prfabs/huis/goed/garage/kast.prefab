@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7956299169850479958}
   - component: {fileID: 6468761594076814067}
   - component: {fileID: 9088650167702498873}
+  - component: {fileID: 526994815911833632}
   m_Layer: 0
   m_Name: kast
   m_TagString: Untagged
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &526994815911833632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287285288854622188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.50949717, y: 1.6477045, z: 2.0240657}
+  m_Center: {x: 0.0009827167, y: 0.82385224, z: -0.0076881647}
