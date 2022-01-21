@@ -7092,7 +7092,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7154622544241016665}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 97666221126614041bc7b95d4149c19a, type: 2}
   m_CullingMode: 0
@@ -14398,6 +14398,7 @@ MonoBehaviour:
   selectedLevel: 
   onScreenSelectedLevelDisplay: {fileID: 5594240806592890856}
   mainMenuScriptObjt: {fileID: 7154622545931584781}
+  playerCharacheterSlenvies: {fileID: 0}
 --- !u!1 &9209798765946850724
 GameObject:
   m_ObjectHideFlags: 0
