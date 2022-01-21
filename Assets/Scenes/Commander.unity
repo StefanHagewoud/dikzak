@@ -2840,8 +2840,8 @@ GameObject:
   - component: {fileID: 760701934}
   - component: {fileID: 760701933}
   - component: {fileID: 760701932}
-  - component: {fileID: 760701936}
   - component: {fileID: 760701935}
+  - component: {fileID: 760701936}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2956,16 +2956,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 760701931}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c4768f390353fe4eba59225f3e4f207, type: 3}
+  m_Script: {fileID: 11500000, guid: 981e159122bd68f4484be1ba183a67ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  views:
-  - {fileID: 1232512049}
-  - {fileID: 879180633}
-  - {fileID: 1464810299}
-  - {fileID: 370155671}
-  - {fileID: 328863687}
-  transitionSpeed: 5
+  views: []
+  transitionSpeed: 2
   startingView: {fileID: 393986604}
   firstComputer: {fileID: 771481168}
   secondComputer: {fileID: 381348640}
@@ -4641,13 +4636,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1691265078}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.693, y: 1.009, z: -0.833}
+  m_LocalRotation: {x: 0.31970358, y: 0, z: 0, w: 0.94751763}
+  m_LocalPosition: {x: 0.83, y: 1.184, z: -0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7439648498723419896}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 37.29, y: 0, z: 0}
 --- !u!108 &1691265080
 Light:
   m_ObjectHideFlags: 0
@@ -4662,8 +4657,8 @@ Light:
   m_Color: {r: 1, g: 0.9019608, b: 0.627451, a: 1}
   m_Intensity: 2
   m_Range: 10
-  m_SpotAngle: 179
-  m_InnerSpotAngle: 150
+  m_SpotAngle: 112.457275
+  m_InnerSpotAngle: 83.457275
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
