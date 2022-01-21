@@ -203,8 +203,8 @@ Camera:
   m_GameObject: {fileID: 384458832}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 1
@@ -476,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2665016080716417946, guid: af485d22a2c01fc42ad49f36a268e2fe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3438457281136431392, guid: af485d22a2c01fc42ad49f36a268e2fe, type: 3}
       propertyPath: m_RootOrder
@@ -615,9 +615,9 @@ GameObject:
   - component: {fileID: 627359666}
   - component: {fileID: 627359665}
   - component: {fileID: 627359664}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platform (1)
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -654,7 +654,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2052ff865ca6cb946acdf3c021d4a67b, type: 2}
+  - {fileID: 2100000, guid: 75343f63c76714e42a2e8860118dc5fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -692,7 +692,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 627359663}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.85, y: 0.63, z: 0}
+  m_LocalPosition: {x: -2.85, y: -0.22000003, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -789,9 +789,9 @@ GameObject:
   - component: {fileID: 773358304}
   - component: {fileID: 773358303}
   - component: {fileID: 773358302}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platform (4)
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -828,7 +828,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 75343f63c76714e42a2e8860118dc5fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -866,7 +866,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773358301}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.78, y: 0.63, z: 2.53}
+  m_LocalPosition: {x: -1.78, y: -0.22, z: 2.53}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -906,9 +906,9 @@ GameObject:
   - component: {fileID: 994402250}
   - component: {fileID: 994402249}
   - component: {fileID: 994402248}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platform (3)
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -945,7 +945,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 75343f63c76714e42a2e8860118dc5fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -983,7 +983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994402247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.16, y: 0.63, z: 2.53}
+  m_LocalPosition: {x: 2.16, y: -0.22000003, z: 2.53}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1412,9 +1412,9 @@ GameObject:
   - component: {fileID: 1974752012}
   - component: {fileID: 1974752011}
   - component: {fileID: 1974752010}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Platform (2)
-  m_TagString: Untagged
+  m_TagString: Obstacles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1451,7 +1451,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 75343f63c76714e42a2e8860118dc5fa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1489,7 +1489,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974752009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.08, y: 0.63, z: 0}
+  m_LocalPosition: {x: 3.08, y: -0.22000003, z: 0}
   m_LocalScale: {x: 1, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1559,8 +1559,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073460675}
   m_Mesh: {fileID: 0}
---- !u!137 &2073460677
-SkinnedMeshRenderer:
+--- !u!23 &2073460677
+MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1573,12 +1573,12 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 3
+  m_RayTracingMode: 2
   m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 2a6691d3c2173b54daafa78fd43249f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1599,18 +1599,7 @@ SkinnedMeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  serializedVersion: 2
-  m_Quality: 0
-  m_UpdateWhenOffscreen: 0
-  m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 0}
-  m_Bones: []
-  m_BlendShapeWeights: []
-  m_RootBone: {fileID: 0}
-  m_AABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0, y: 0, z: 0}
-  m_DirtyAABB: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!4 &2073460678
 Transform:
   m_ObjectHideFlags: 0
@@ -1733,7 +1722,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1808,6 +1797,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: aanrechtdeuropen
       objectReference: {fileID: 0}
+    - target: {fileID: 1414713959048630513, guid: 1a4c3377a0d298a42beb216d552fb548, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1795179735078210123, guid: 1a4c3377a0d298a42beb216d552fb548, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1865,6 +1858,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: magnetron
       objectReference: {fileID: 0}
+    - target: {fileID: 79187977794906409, guid: c4c1e4701029dd846ad3ab5914a38bc4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 743803842054992787, guid: c4c1e4701029dd846ad3ab5914a38bc4, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -1921,6 +1918,10 @@ PrefabInstance:
     - target: {fileID: 8108489824989626574, guid: c0a4794f85429634596835ffe6493d92, type: 3}
       propertyPath: m_Name
       value: aanrechtmetsink
+      objectReference: {fileID: 0}
+    - target: {fileID: 8108489824989626574, guid: c0a4794f85429634596835ffe6493d92, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8920773404245629556, guid: c0a4794f85429634596835ffe6493d92, type: 3}
       propertyPath: m_RootOrder
@@ -2062,7 +2063,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1277246129721795829, guid: 82345d3f94926eb479a0e7092492abb1, type: 3}
   m_PrefabInstance: {fileID: 2123686125910541350}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2123686125910541352
+--- !u!114 &2123686125910541353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2071,22 +2072,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2123686125910541351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c9ac3fca7418684580a8de86f24a454, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cd3ebd220520e546a6f2056470b6dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 6.69
-  viewAngle: 75
+  viewRadius: 8.65
+  viewAngle: 52
   targetMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 128
   obstacleMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 128
   visibleTargets: []
-  meshResolution: 5.59
-  edgeResolveIterations: 0
+  meshResolution: 5
+  edgeResolveIterations: 4
   edgeDstThreshold: 0
-  maskCutawayDst: 0.1
+  maskCutawayDst: 0
   viewMeshFilter: {fileID: 2073460676}
 --- !u!4 &2123686125910541358 stripped
 Transform:
@@ -2148,6 +2149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: keuken
       objectReference: {fileID: 0}
+    - target: {fileID: 2071922502144747140, guid: bf034f88ab3a48243851369d1b6f0b5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf034f88ab3a48243851369d1b6f0b5f, type: 3}
 --- !u!1001 &4740171280183261375
@@ -2205,6 +2210,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: koffieapparaat(apparaat)
       objectReference: {fileID: 0}
+    - target: {fileID: 1809293229453430759, guid: acb1924286ee5374f94876f32ef2595a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acb1924286ee5374f94876f32ef2595a, type: 3}
 --- !u!1001 &7099370903790175220
@@ -2217,6 +2226,10 @@ PrefabInstance:
     - target: {fileID: 2800223137149537937, guid: dacb1316c33190f4ab2fdca1d08c216b, type: 3}
       propertyPath: m_Name
       value: aanrecht
+      objectReference: {fileID: 0}
+    - target: {fileID: 2800223137149537937, guid: dacb1316c33190f4ab2fdca1d08c216b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3285293155541357611, guid: dacb1316c33190f4ab2fdca1d08c216b, type: 3}
       propertyPath: m_RootOrder
@@ -2318,6 +2331,10 @@ PrefabInstance:
     - target: {fileID: 6398099469130468574, guid: f07c30c0a5c309140b6e05692c45a7d6, type: 3}
       propertyPath: m_Name
       value: kastjes
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398099469130468574, guid: f07c30c0a5c309140b6e05692c45a7d6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f07c30c0a5c309140b6e05692c45a7d6, type: 3}
@@ -2436,6 +2453,10 @@ PrefabInstance:
     - target: {fileID: 6760699520126035123, guid: 24c1a8ef742137041965f331b981810b, type: 3}
       propertyPath: m_Name
       value: koffieapparaat(de kan)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6760699520126035123, guid: 24c1a8ef742137041965f331b981810b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 24c1a8ef742137041965f331b981810b, type: 3}

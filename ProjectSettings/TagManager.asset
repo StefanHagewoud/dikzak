@@ -15,6 +15,7 @@ TagManager:
   - Computer1
   - Computer2
   - OnOffButton
+  - Book
   layers:
   - Default
   - TransparentFX
