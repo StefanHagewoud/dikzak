@@ -62,10 +62,22 @@ public class BombButtons : MonoBehaviour
         if (textBox.GetComponent<Text>().text == "" + gameObject.GetComponent<CodeGenerator>().number)
         {
             Debug.Log("goede code ingevuld!");
-            GameObject.Find("Timer").GetComponent<BombTimer>().enabled = false;
-        }
-        //Debug.Log("EnterCode");
-    }
-    
+            //GameObject.Find("Timer").GetComponent<BombTimer>().enabled = false;
+            GetComponent<CodeGenerator>().puzzelCounter++;
+            textBox.GetComponent<Text>().text = "";
+            gameObject.SetActive(false);
+            GameObject.Find("1").GetComponent<Button>().interactable = false;
+            GameObject.Find("2").GetComponent<Button>().interactable = false;
+            GameObject.Find("3").GetComponent<Button>().interactable = false;
+            GameObject.Find("4").GetComponent<Button>().interactable = false;
+            GameObject.Find("5").GetComponent<Button>().interactable = false;
+            GameObject.Find("6").GetComponent<Button>().interactable = false;
+            GameObject.Find("7").GetComponent<Button>().interactable = false;
+            GameObject.Find("8").GetComponent<Button>().interactable = false;
+            GameObject.Find("9").GetComponent<Button>().interactable = false;
+            GameObject.Find("0").GetComponent<Button>().interactable = false;
+            Destroy(this);
 
+        }
+    }
 }
