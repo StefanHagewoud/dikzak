@@ -5,16 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/MainMenuNoMultiplayer.unity
-    guid: 9271f7f7a3fb8fc40a516269082c88f7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Kmar Project/Noah/Noah/SimpleMoveAndShoot/Scenes/MainMenu.unity
     guid: 6b066de7032734a7c90042c275f688b2
   - enabled: 1
     path: Assets/Scenes/Makkelijk.unity
     guid: 54bf75c523352e54dab93be330775c79
-  - enabled: 1
+  - enabled: 0
     path: Assets/Kmar Project/Stefan/UX scenes/MainMenu.unity
     guid: 04e1d8aae147cdf48927dcc8a9ecae6f
   - enabled: 1
@@ -23,4 +20,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Commander.unity
     guid: 0903d1d8f7c2f44488a793ce2bae5886
+  - enabled: 1
+    path: Assets/Scenes/MainMenuNoMultiplayer.unity
+    guid: 9271f7f7a3fb8fc40a516269082c88f7
+  - enabled: 1
+    path: Assets/Scenes/Gemiddeld.unity
+    guid: 03e4359d69ed0e343b8749bbf1d4363e
+  - enabled: 1
+    path: Assets/Scenes/Moeilijk.unity
+    guid: 5d8c65222e39d9746ad6b7971f6231d1
   m_configObjects: {}
