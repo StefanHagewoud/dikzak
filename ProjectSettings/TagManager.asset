@@ -13,6 +13,19 @@ TagManager:
   - Cilinder
   - Capsulen
   - Canvas
+  - Vierkant
+  - Square
+  - Driehoek
+  - X
+  - cirkel
+  - Rondje
+  - Triangle
+  - Xfiguur
+  - Rond
+  - vier
+  - Xje
+  - Drie
+  - Bom
   layers:
   - Default
   - TransparentFX

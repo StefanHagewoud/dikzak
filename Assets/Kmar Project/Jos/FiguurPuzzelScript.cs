@@ -8,8 +8,10 @@ public class FiguurPuzzelScript : MonoBehaviour
     public Canvas canvas;
     public RectTransform spawnLocation1;
     public RectTransform spawnLocation2;
+    public RectTransform spawnLocation3;
     public GameObject[] figuren;
     public GameObject[] figuren2;
+    public GameObject[] figuren3;
     public Text awnserText;
     public string figuurCijfer;
 
@@ -18,45 +20,70 @@ public class FiguurPuzzelScript : MonoBehaviour
         StartCoroutine(MyIEnumerator());
         Instantiate(figuren[Random.Range(0, figuren.Length)], spawnLocation1.transform);
         
-        
-        if (GameObject.FindGameObjectWithTag("Cube"))
+        if (GameObject.FindGameObjectWithTag("Square"))
         {
-            figuurCijfer += 78;
+            figuurCijfer += 7;
         }
-        if (GameObject.FindGameObjectWithTag("Sphere"))
+        if (GameObject.FindGameObjectWithTag("Triangle"))
         {
-            figuurCijfer += 42;
+            figuurCijfer += 9;
         }
-        if (GameObject.FindGameObjectWithTag("Cylinder"))
+        if (GameObject.FindGameObjectWithTag("X"))
         {
-            figuurCijfer += 13;
+            figuurCijfer += 3;
         }
-        if (GameObject.FindGameObjectWithTag("Capsule"))
+        if (GameObject.FindGameObjectWithTag("cirkel"))
         {
-            figuurCijfer += 56;
+            figuurCijfer += 5;
         }
     }
 
     IEnumerator MyIEnumerator()
     {
+        StartCoroutine(MyIEnumerator2());
+
         yield return new WaitForSeconds(1);
         Instantiate(figuren2[Random.Range(0, figuren2.Length)], spawnLocation2.transform);
-        
-        if (GameObject.FindGameObjectWithTag("Kubus"))
+
+        if (GameObject.FindGameObjectWithTag("Vierkant"))
         {
-            figuurCijfer += 78;
+            figuurCijfer += 7;
         }
-        if (GameObject.FindGameObjectWithTag("Bal"))
+        if (GameObject.FindGameObjectWithTag("Driehoek"))
         {
-            figuurCijfer += 42;
+            figuurCijfer += 9;
         }
-        if (GameObject.FindGameObjectWithTag("Cilinder"))
+        if (GameObject.FindGameObjectWithTag("Xfiguur"))
         {
-            figuurCijfer += 13;
+            figuurCijfer += 3;
         }
-        if (GameObject.FindGameObjectWithTag("Capsulen"))
+        if (GameObject.FindGameObjectWithTag("Rondje"))
         {
-            figuurCijfer += 56;
+            figuurCijfer += 5;
         }
     }
+
+    IEnumerator MyIEnumerator2()
+    {
+        yield return new WaitForSeconds(2);
+        Instantiate(figuren3[Random.Range(0, figuren3.Length)], spawnLocation3.transform);
+
+        if (GameObject.FindGameObjectWithTag("vier"))
+        {
+            figuurCijfer += 7;
+        }
+        if (GameObject.FindGameObjectWithTag("Drie"))
+        {
+            figuurCijfer += 9;
+        }
+        if (GameObject.FindGameObjectWithTag("Xje"))
+        {
+            figuurCijfer += 3;
+        }
+        if (GameObject.FindGameObjectWithTag("Rond"))
+        {
+            figuurCijfer += 5;
+        }
+    }
+     
 }

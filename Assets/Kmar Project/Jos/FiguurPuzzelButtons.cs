@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class FiguurPuzzelButtons : MonoBehaviour
 {
     public Text awnserText;
+    public float delay = 3;
     public void Button0()
     {
         awnserText.GetComponent<Text>().text += 0;
@@ -56,6 +57,12 @@ public class FiguurPuzzelButtons : MonoBehaviour
         if (awnserText.GetComponent<Text>().text == "" + GameObject.Find("Enter").GetComponent<FiguurPuzzelScript>().figuurCijfer)
         {
             Debug.Log("Goede Code Ingevuld!");
+            awnserText.GetComponent<Text>().text = "";
+            Invoke("PuzzelCompleted", delay);
         }
+    }
+    public void PuzzelCompleted()
+    {
+        GameObject.Find("figuurpuzzel").SetActive(false);
     }
 }

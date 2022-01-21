@@ -65,6 +65,7 @@ public class BombButtons : MonoBehaviour
             //GameObject.Find("Timer").GetComponent<BombTimer>().enabled = false;
             GetComponent<CodeGenerator>().puzzelCounter++;
             textBox.GetComponent<Text>().text = "";
+            gameObject.SetActive(false);
             GameObject.Find("1").GetComponent<Button>().interactable = false;
             GameObject.Find("2").GetComponent<Button>().interactable = false;
             GameObject.Find("3").GetComponent<Button>().interactable = false;
@@ -76,6 +77,7 @@ public class BombButtons : MonoBehaviour
             GameObject.Find("9").GetComponent<Button>().interactable = false;
             GameObject.Find("0").GetComponent<Button>().interactable = false;
             Destroy(this);
+
         }
     }
 }

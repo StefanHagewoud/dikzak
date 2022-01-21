@@ -9,6 +9,8 @@ public class Puzzelbijhouder : MonoBehaviour
     public bool[] puzzels;
     public int number = 1597;
     public int kleurCode = 641;
+    public float delay = 3;
+    public GameObject bom;
 
     public void Start()
     {
@@ -64,7 +66,13 @@ public class Puzzelbijhouder : MonoBehaviour
         }
         if (gotAllpuzzels == true)
         {
+            Invoke("BomCompleted", delay);
             GameObject.Find("Timer").GetComponent<BombTimer>().enabled = false;
+
         }
+    }
+    public void BomCompleted()
+    {
+        bom.SetActive(false);
     }
 }
