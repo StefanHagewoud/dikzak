@@ -8914,24 +8914,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8532775774959825302, guid: ec398689166aa1044898772fab15c075, type: 3}
   m_PrefabInstance: {fileID: 453730229}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &453980620 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9130887287034600421, guid: a5c521230cedb8841a1b97836b6b4586, type: 3}
-  m_PrefabInstance: {fileID: 1757820345}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &453980624
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 453980620}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.09951834, y: 1.7499999, z: 0.9999997}
-  m_Center: {x: -0.0000004768641, y: 0.87499994, z: -0.49999985}
 --- !u!1 &456352307 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6420086575616579941, guid: cf38e454e502c0e47b2e10e784e892f1, type: 3}
@@ -17848,7 +17830,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000905690}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
@@ -22185,6 +22167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b810713d87b3fd241bc88d6c3a421c57, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c87c68e1a879374e9e98a71018fdafd, type: 2}
     - target: {fileID: 919132149155446097, guid: b810713d87b3fd241bc88d6c3a421c57, type: 3}
       propertyPath: m_Name
       value: trap1 (1)
@@ -30988,6 +30974,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b12967daba0746544b79a0ea4646a4c0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c87c68e1a879374e9e98a71018fdafd, type: 2}
     - target: {fileID: 919132149155446097, guid: b12967daba0746544b79a0ea4646a4c0, type: 3}
       propertyPath: m_Name
       value: wallhoek (1)
@@ -31095,6 +31085,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b810713d87b3fd241bc88d6c3a421c57, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c87c68e1a879374e9e98a71018fdafd, type: 2}
     - target: {fileID: 919132149155446097, guid: b810713d87b3fd241bc88d6c3a421c57, type: 3}
       propertyPath: m_Name
       value: trap1 (2)
@@ -44744,6 +44738,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b810713d87b3fd241bc88d6c3a421c57, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c87c68e1a879374e9e98a71018fdafd, type: 2}
     - target: {fileID: 919132149155446097, guid: b810713d87b3fd241bc88d6c3a421c57, type: 3}
       propertyPath: m_Name
       value: trap1
@@ -50267,7 +50265,7 @@ PrefabInstance:
     - target: {fileID: 129180018, guid: af485d22a2c01fc42ad49f36a268e2fe, type: 3}
       propertyPath: door
       value: 
-      objectReference: {fileID: 453980620}
+      objectReference: {fileID: 0}
     - target: {fileID: 129180018, guid: af485d22a2c01fc42ad49f36a268e2fe, type: 3}
       propertyPath: lockObj
       value: 
@@ -52352,6 +52350,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: b12967daba0746544b79a0ea4646a4c0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0c87c68e1a879374e9e98a71018fdafd, type: 2}
     - target: {fileID: 919132149155446097, guid: b12967daba0746544b79a0ea4646a4c0, type: 3}
       propertyPath: m_Name
       value: wallhoek
