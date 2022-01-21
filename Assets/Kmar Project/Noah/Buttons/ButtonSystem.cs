@@ -11,12 +11,16 @@ public class ButtonSystem : MonoBehaviour
     public List<GameObject> trueAndFalse;
 
     [Header("Code Settings")]
-    public int randomCodeGenerator;
+    public int codeToEnter;
+    public int randomNumberForCode;
     public string enteredCode;
+    public Text randomCodeText;
+
+    public GameObject buttonsGameobject;
 
     void Swap()
     {
-        for(int i = 0; i <= buttons.Count - 1; i++)
+        for (int i = 0; i <= buttons.Count - 1; i++)
         {
             Vector3 temp = buttons[i].transform.position;
             int randomNumber = Random.Range(0, 9);
@@ -29,11 +33,14 @@ public class ButtonSystem : MonoBehaviour
     {
         //Finds all buttons in scene and puts them in a List
         buttons.AddRange(GameObject.FindGameObjectsWithTag("Buttons"));
+
+        randomNumberForCode = Random.Range(1, 5);
+        randomCodeText.text = randomNumberForCode.ToString();
     }
     // Start is called before the first frame update
     void Start()
     {
-        randomCodeGenerator = Random.Range(9999, 99999);
+        CheckWhichCode();
 
         //Swaps Random Buttons
         Swap();
@@ -41,9 +48,10 @@ public class ButtonSystem : MonoBehaviour
 
     public void Submit()
     {
-        if(enteredCode == randomCodeGenerator.ToString())
+        if (enteredCode == codeToEnter.ToString())
         {
             Debug.Log("Correct");
+            buttonsGameobject.SetActive(false);
         }
         else
         {
@@ -51,9 +59,24 @@ public class ButtonSystem : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void CheckWhichCode()
     {
+        if (randomNumberForCode == 1)
+        {
+            codeToEnter = 1234567890;
+        }
+        if (randomNumberForCode == 2)
+        {
+            codeToEnter = 1054982736;
+        }
+        if (randomNumberForCode == 3)
+        {
+            codeToEnter = 1874526903;
+        }
 
+        if (randomNumberForCode == 3)
+        {
+            codeToEnter = 1546893720;
+        }
     }
 }
