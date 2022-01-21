@@ -13,6 +13,7 @@ public class CameraTransition : MonoBehaviour
     public Transform startingView;
     public Transform firstComputer;
     public Transform secondComputer;
+    public Transform bookView;
 
     // Use this for initialization
     void Start()
@@ -43,6 +44,10 @@ public class CameraTransition : MonoBehaviour
                     if (hit.collider.tag == "Computer2")
                     {
                         currentView = secondComputer;
+                    }
+                    if(hit.collider.tag == "Book")
+                    {
+                        currentView = bookView;
                     }
                 }
             }
