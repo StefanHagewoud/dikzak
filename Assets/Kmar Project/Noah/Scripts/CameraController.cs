@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     {
         if (player == null)
         {
-            player = GameObject.Find("BreacherPlayer(Clone)").transform;
+            player = GameObject.Find("BreacherPlayer").transform;
         }
 
         if (player)
