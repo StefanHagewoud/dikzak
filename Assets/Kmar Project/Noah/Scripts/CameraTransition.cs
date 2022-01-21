@@ -95,4 +95,9 @@ public class CameraTransition : MonoBehaviour
         transform.eulerAngles = currentAngle;
 
     }
+
+    public void StartingView()
+    {
+        currentView = startingView;
+    }
 }

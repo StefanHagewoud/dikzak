@@ -74,7 +74,7 @@ public class ButtonSystem : MonoBehaviour
             codeToEnter = 1874526903;
         }
 
-        if (randomNumberForCode == 3)
+        if (randomNumberForCode == 4)
         {
             codeToEnter = 1546893720;
         }
