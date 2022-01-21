@@ -22,6 +22,8 @@ namespace Bolt.Samples.Photon.Lobby
         public Text onScreenSelectedLevelDisplay;
 
         public GameObject mainMenuScriptObjt;
+
+        public GameObject playerCharacheterSlenvies;
         
 
         public void Awake()
