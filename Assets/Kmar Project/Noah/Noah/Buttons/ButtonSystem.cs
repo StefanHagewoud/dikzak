@@ -18,6 +18,8 @@ public class ButtonSystem : MonoBehaviour
 
     public GameObject buttonsGameobject;
 
+    public GameObject puzzleActivator;
+
     void Swap()
     {
         for (int i = 0; i <= buttons.Count - 1; i++)
@@ -52,6 +54,7 @@ public class ButtonSystem : MonoBehaviour
         {
             Debug.Log("Correct");
             buttonsGameobject.SetActive(false);
+            puzzleActivator.GetComponent<PuzzleActivator>().isSolved = true;
         }
         else
         {

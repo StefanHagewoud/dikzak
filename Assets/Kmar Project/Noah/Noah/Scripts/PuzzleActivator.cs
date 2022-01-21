@@ -14,6 +14,10 @@ public class PuzzleActivator : MonoBehaviour
     public GameObject lockObj;
     private GameObject player;
 
+    [Header("Sort Puzzle")]
+    public bool sleutel;
+    public bool knop;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,9 +32,16 @@ public class PuzzleActivator : MonoBehaviour
             pressECanvas.SetActive(false);
             puzzleUI.SetActive(true);
 
-            for (int i = 0; i <= puzzleUI.GetComponent<KeySystem>().keys.Count - 1; i++)
+            if(sleutel == true)
             {
-                puzzleUI.GetComponent<KeySystem>().keys[i].GetComponent<Key>().puzzleActivator = thisPuzzleManager;
+                for (int i = 0; i <= puzzleUI.GetComponent<KeySystem>().keys.Count - 1; i++)
+                {
+                    puzzleUI.GetComponent<KeySystem>().keys[i].GetComponent<Key>().puzzleActivator = thisPuzzleManager;
+                }
+            }
+            if(knop == true)
+            {
+                puzzleUI.GetComponent<ButtonSystem>().puzzleActivator = thisPuzzleManager;
             }
         }
 
@@ -38,8 +49,8 @@ public class PuzzleActivator : MonoBehaviour
         {
             puzzleUI.SetActive(false);
             pressECanvas.SetActive(false);
-            Destroy(door);
-            Destroy(lockObj);
+            door.SetActive(false);
+            lockObj.SetActive(false);
             player.GetComponent<PlayerController>().equippedGun.SetActive(true);
         }
     }
