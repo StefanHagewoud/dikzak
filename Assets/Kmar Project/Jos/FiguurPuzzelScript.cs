@@ -5,19 +5,58 @@ using UnityEngine.UI;
 
 public class FiguurPuzzelScript : MonoBehaviour
 {
-    public Transform spawnlocation1;
-    public Transform spawnlocation2;
+    public Canvas canvas;
+    public RectTransform spawnLocation1;
+    public RectTransform spawnLocation2;
     public GameObject[] figuren;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject[] figuren2;
+    public Text awnserText;
+    public string figuurCijfer;
+
+    public void Start()
     {
-        Instantiate(figuren[Random.Range(0,figuren.Length)], spawnlocation1.position, spawnlocation1.rotation);
-        Instantiate(figuren[Random.Range(0,figuren.Length)], spawnlocation2.position, spawnlocation1.rotation);
+        StartCoroutine(MyIEnumerator());
+        Instantiate(figuren[Random.Range(0, figuren.Length)], spawnLocation1.transform);
+        
+        
+        if (GameObject.FindGameObjectWithTag("Cube"))
+        {
+            figuurCijfer += 78;
+        }
+        if (GameObject.FindGameObjectWithTag("Sphere"))
+        {
+            figuurCijfer += 42;
+        }
+        if (GameObject.FindGameObjectWithTag("Cylinder"))
+        {
+            figuurCijfer += 13;
+        }
+        if (GameObject.FindGameObjectWithTag("Capsule"))
+        {
+            figuurCijfer += 56;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator MyIEnumerator()
     {
+        yield return new WaitForSeconds(1);
+        Instantiate(figuren2[Random.Range(0, figuren2.Length)], spawnLocation2.transform);
         
+        if (GameObject.FindGameObjectWithTag("Kubus"))
+        {
+            figuurCijfer += 78;
+        }
+        if (GameObject.FindGameObjectWithTag("Bal"))
+        {
+            figuurCijfer += 42;
+        }
+        if (GameObject.FindGameObjectWithTag("Cilinder"))
+        {
+            figuurCijfer += 13;
+        }
+        if (GameObject.FindGameObjectWithTag("Capsulen"))
+        {
+            figuurCijfer += 56;
+        }
     }
 }
