@@ -14398,6 +14398,7 @@ MonoBehaviour:
   selectedLevel: 
   onScreenSelectedLevelDisplay: {fileID: 5594240806592890856}
   mainMenuScriptObjt: {fileID: 7154622545931584781}
+  playerCharacheterSlenvies: {fileID: 0}
 --- !u!1 &9209798765946850724
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ public class figuurpuzzeltrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == ("player"))
+        if (other.tag == ("Player"))
         {
             figuurpuzzel.SetActive(true);
         }

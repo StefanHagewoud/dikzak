@@ -14,7 +14,7 @@ public class Bomtrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "player")
+        if (other.gameObject.tag == "Player")
         {
             bom.SetActive(true);
         }

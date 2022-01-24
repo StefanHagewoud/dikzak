@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public GameObject pistol;
     public GameObject equippedGun;
 
+    public GameObject gameOverScreen;
+
 
     // Start is called before the first frame update
     void Start()

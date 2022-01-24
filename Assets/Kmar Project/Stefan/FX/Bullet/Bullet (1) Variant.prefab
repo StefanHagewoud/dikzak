@@ -117,6 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blood: {fileID: 7127369694442108113, guid: 7720a905ae59c454f98ab64e750dda29, type: 3}
   hit: {fileID: 782049073210775686, guid: 3b383e139d44d9d41b909c942267aa3b, type: 3}
+  gameOverScreen: {fileID: 7602784151560414395, guid: f98f3356e4336814db19990c111e010f, type: 3}
 --- !u!114 &1161112227862906445
 MonoBehaviour:
   m_ObjectHideFlags: 0

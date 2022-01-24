@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FiguurPuzzelButtons : MonoBehaviour
 {
+    public GameObject puzzelTrigger;
     public Text awnserText;
     public float delay = 3;
     public void Button0()
@@ -64,5 +65,7 @@ public class FiguurPuzzelButtons : MonoBehaviour
     public void PuzzelCompleted()
     {
         GameObject.Find("figuurpuzzel").SetActive(false);
+        puzzelTrigger.SetActive(false);
+        
     }
 }

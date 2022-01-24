@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Destroy : MonoBehaviour
 {
@@ -28,8 +29,11 @@ public class Destroy : MonoBehaviour
         else if (collision.collider.tag == "Player")
         {
             Instantiate(blood, collision.transform.position, Quaternion.identity);
+            (collision.gameObject).GetComponent<PlayerController>().gameOverScreen.SetActive(true);
             Destroy(collision.gameObject);
+            
             Destroy(this.gameObject);
+
         }
         else
         {

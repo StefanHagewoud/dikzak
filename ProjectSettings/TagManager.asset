@@ -17,6 +17,7 @@ TagManager:
   - OnOffButton
   - Book
   - Obstacles
+  - GameOver
   layers:
   - Default
   - TransparentFX
